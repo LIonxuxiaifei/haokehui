@@ -1,0 +1,386 @@
+@charset "utf-8";
+html,body,div,ul,ol,li,p,h1,h2,h3,h4,h5,h6,
+form,fieldset,input,textarea,blockquote,table,th,td,
+dl,dt,dd,header,footer,nav,section,article,
+aside {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  position: relative;
+  font:.14rem/1.2 "Microsoft Yahei"
+}
+img {
+  vertical-align: top;
+  border: none;
+  max-width: 100%;
+}
+ul,ol,li {
+  list-style: none;
+}
+input {
+  border: 0;
+  background: none;
+}
+i,em {
+  font-style: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+/*链接样式*/
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  outline: none;
+  blr: expression("this.onFocus=this.blur()");
+}
+/**input type="number" 把那两个按钮去掉**/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="search"] input,
+textarea {
+  -webkit-appearance: none;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+small {
+  font-size: 85%;
+}
+div{
+	margin: 0;
+	padding: 0;
+}
+.PatentResult-Bg{
+	display: block;
+	width: 7.5rem;
+	min-height: 13.34rem;
+	background-color: #F1F1F1;
+}
+.PatentResult-header{
+	display: block;
+	width: 7.5rem;
+	height: 1.28rem;
+	background-color: #5056CD;
+	text-align: center;
+	position: fixed;
+	top: 0;
+}
+.PatentResult-header img{
+	position: absolute;
+	display: block;
+	width: 0.22rem;
+	height: 0.34rem;
+	left: 0.28rem;
+	top: 0.66rem;
+}
+.PatentResult-header .PatentResult-hspan02{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	left: 0.57rem;
+	top: 0.65rem;
+	position: absolute;
+}
+.PatentResult-header .PatentResult-hspan03{
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	vertical-align: -0.7rem;
+}
+.PatentResult-nav{
+	display: block;
+	width: 7.5rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	margin-top: 1.28rem;
+}
+.PatentResult-nav span{
+	font-size: 0.34rem;
+	color: #5056CD;
+	margin-left: 0.3rem;
+}
+.PatentResult-content{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+	background-color: #FFFFFF;
+	/*margin-bottom: 4.85rem;*/
+}
+.PatentResult-content li{
+	display: block;
+	width: 7.23rem;
+	height: 2.3rem;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #E8E8E8;
+	margin-left: 0.27rem;
+}
+.PatentResult-content li span{
+	font-size: 0.34rem;
+	color: #2A2A2A;
+	font-weight: 500;
+	display: block;
+	width: 4rem;
+	margin-top: 0.5rem;
+	float: left;
+}
+.PatentResult-content li img{
+	display: block;
+	width: 2.6rem;
+	height: 1.7rem;
+	float: right;
+	margin-right: 0.26rem;
+	margin-top: 0.3rem;
+}
+.PatentResult-content li label{
+	display: block;
+	float: left;
+	margin-top: 0.6rem;
+	margin-right: 0.3rem;
+	font-size: 0.22rem;
+	color: #808080;
+}
+
+
+.patentService{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+}
+.patentServiceTop{
+	display: block;
+	width: 7.5rem;
+	height: 0.53rem;
+	background-color: #f1f1f8;
+	position: fixed;
+	bottom: 3.64rem;
+}
+.patentServiceTop span{
+	font-size: 0.34rem;
+	color: #5056CD;
+	font-weight: 500;
+	float: left;
+	margin-left: 0.29rem;
+	margin-top: 0.07rem;
+}
+.patentServiceContent{
+	display: block;
+	width: 7.5rem;
+	position: fixed;
+	bottom: 0;
+}
+.patentServiceContent li{
+	display: block;
+	width: 33.3%;
+	float: left;
+	height: 1.82rem;
+	background-color: #FFFFFF;
+}
+.patentServiceContent li{
+	border-right: 1px solid #e8e7e7;
+	border-bottom: 1px solid #E8E7E7;
+}
+.patentServiceContent li:first-child img{
+	display: block;
+	width: 0.62rem;
+	height: 0.62rem;
+	float: left;
+	margin-left: 0.86rem;
+	margin-top: 0.35rem;
+}
+.patentServiceContent li:nth-child(2) img{
+	display: block;
+	width: 0.62rem;
+	height: 0.57rem;
+	float: left;
+	margin-left: 0.93rem;
+	margin-top: 0.41rem;
+}
+.patentServiceContent li:nth-child(3) img{
+	display: block;
+	width: 0.69rem;
+	height: 0.5rem;
+	float: left;
+	margin-left: 0.9rem;
+	margin-top: 0.44rem;
+}
+.patentServiceContent li:nth-child(4) img{
+	display: block;
+	width: 0.6rem;
+	height: 0.62rem;
+	float: left;
+	margin-left: 0.9rem;
+	margin-top: 0.4rem;
+}
+.patentServiceContent li:nth-child(5) img{
+	display: block;
+	width: 0.65rem;
+	height: 0.61rem;
+	float: left;
+	margin-left: 0.92rem;
+	margin-top: 0.4rem;
+}
+.patentServiceContent li:nth-child(6) img{
+	display: block;
+	width: 0.54rem;
+	height: 0.64rem;
+	float: left;
+	margin-left: 0.94rem;
+	margin-top: 0.35rem;
+}
+.patentServiceContent li span{
+	display: block;
+	width: 100%;
+	height: 0.5rem;
+	float: left;
+	text-align: center;
+	line-height: 0.5rem;
+	font-size: 0.28rem;
+	color: #2c2b2b;
+}
+
+
+
+
+/*@media*/
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 42.66px;
+  }
+}
+@media screen and (min-width: 360px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 384px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 51.2px;
+  }
+}
+@media screen and (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 53.34px;
+  }
+}
+@media screen and (min-width: 412px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 54.93px;
+  }
+}
+@media screen and (min-width: 414px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 55.2px;
+  }
+}
+@media screen and (min-width: 424px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 56.54px;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 15.36px;
+  }
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 540px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width: 568px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 75.73px;
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 667px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 88.93px;
+  }
+}
+@media screen and (min-width: 720px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 96px;
+  }
+}
+@media screen and (min-width: 736px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 98.13px;
+  }
+}
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 24px;
+  }
+  html {
+    font-size: 100px;
+  }
+}

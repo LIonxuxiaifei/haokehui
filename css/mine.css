@@ -1,0 +1,585 @@
+@charset "utf-8";
+html,body,div,ul,ol,li,p,h1,h2,h3,h4,h5,h6,
+form,fieldset,input,textarea,blockquote,table,th,td,
+dl,dt,dd,header,footer,nav,section,article,
+aside {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  position: relative;
+  font:.14rem/1.2 "Microsoft Yahei"
+}
+img {
+  vertical-align: top;
+  border: none;
+  max-width: 100%;
+}
+ul,ol,li {
+  list-style: none;
+}
+input {
+  border: 0;
+  background: none;
+}
+i,em {
+  font-style: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+/*链接样式*/
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  outline: none;
+  blr: expression("this.onFocus=this.blur()");
+}
+/**input type="number" 把那两个按钮去掉**/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="search"] input,
+textarea {
+  -webkit-appearance: none;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+small {
+  font-size: 85%;
+}
+div{
+	margin: 0;
+	padding: 0;
+}
+
+.login-Bg{
+	display: block;
+	width: 7.5rem;
+	min-height: 13.34rem;
+	background-color: #f1f1f1;
+}
+.login-header{
+	display: block;
+	width: 7.5rem;
+	height: 1.26rem;
+	background-color: #5156c6;
+	text-align: center;
+}
+.login-header .login-hspan01{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	float: left;
+	margin-top: 0.67rem;
+	margin-left: 0.2rem;
+	font-family: PingFang;
+}
+.login-header .login-hspan02{
+	vertical-align: -0.67rem;
+	font-size: 0.32rem;
+	color: #FFFFFF;
+}
+.login-header .login-hspan03{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	float: right;
+	margin-top: 0.67rem;
+	margin-right: 0.2rem;
+	font-family: PingFang;
+}
+
+
+.login-nav{
+	margin-top: 0.33rem;
+	display: block;
+	width: 7.5rem;
+	height: 1.8rem;
+	background-color: #FFFFFF;
+}
+.login-nav li:first-child{
+	border-bottom: 1px solid #eaeaea;
+}
+.login-nav li{
+	display: block;
+	width: 7.5rem;
+	height: 0.9rem;
+}
+.login-nav li:first-child img{
+	display: block;
+	width: 0.51rem;
+	height: 0.51rem;
+	margin-left: 0.3rem;
+	margin-top: 0.31rem;
+	float: left;
+}
+.login-nav li:nth-child(2) img{
+	display: block;
+	width: 0.51rem;
+	height: 0.51rem;
+	margin-left: 0.3rem;
+	margin-top: 0.31rem;
+	float: left;
+}
+.login-nav li:first-child input{
+	font-size: 0.32rem;
+	color: #cccccc;
+	margin-left: 0.32rem;
+	margin-top: 0.33rem;
+	float: left;
+}
+.login-nav li:nth-child(2) input{
+	font-size: 0.32rem;
+	color: #cccccc;
+	margin-left: 0.32rem;
+	margin-top: 0.33rem;
+	float: left;
+}
+.login-content{
+	display: block;
+	width: 100%;
+	height: 2.28rem;
+}
+.login-content span{
+	display: block;
+	width: 7rem;
+	height: 0.9rem;
+	background-color: #5156c6;
+	text-align: center;
+	line-height: 0.9rem;
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	border-radius: 10px;
+	float: left;
+	margin-left: 0.25rem;
+	margin-top: 0.66rem;
+}
+.login-content1 span{
+	font-size: 0.28rem;
+	color: #a1a1a1;
+	float: left;
+	margin-left: 0.25rem;
+}
+.login-content1 label{
+	font-size: 0.28rem;
+	color: #818fad;
+	float: right;
+	margin-right: 0.25rem;
+}
+
+
+/*register*/
+.register-Bg{
+	display: block;
+	width: 7.5rem;
+	min-height: 13.34rem;
+	background-color: #F1F1F1;
+}
+.register-header{
+	display: block;
+	width: 7.5rem;
+	height: 1.26rem;
+	background-color: #5156C6;
+	text-align: center;
+	position: relative;
+}
+.register-header img{
+	position: absolute;
+	display: block;
+	width: 0.22rem;
+	height: 0.34rem;
+	left: 0.28rem;
+	top: 0.66rem;
+}
+.register-header .register-hspan02{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	left: 0.57rem;
+	top: 0.65rem;
+	position: absolute;
+}
+.register-header .register-hspan03{
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	vertical-align: -0.7rem;
+}
+.register-nav{
+	display: block;
+	width: 7.5rem;
+	height: 3.6rem;
+	background-color: #FFFFFF;
+	margin-top: 0.32rem;
+}
+.register-nav li{
+	position: relative;
+	display: block;
+	width: 7.5rem;
+	height: 0.9rem;
+	border-bottom: 1px solid #eaeaea;
+}
+.register-nav li:nth-child(2) .register-GetCode{
+	display: block;
+	position: absolute;
+	/*width: 1.34rem;*/
+	/*height: 0.42rem;*/
+	width: 1.5rem;
+	height: 0.5rem;	
+	float: right;
+	background-color: #7578cd;
+	text-align: center;
+	line-height: 0.42rem;
+	border-radius: 3px;
+	font-size: 0.24rem;
+	color: #ffffff;
+	right: 0.3rem;
+	top: -0.1rem;
+	cursor: pointer;
+}
+.register-nav li:last-child{
+	border-bottom: none;
+}
+.register-nav li img{
+	display: block;
+	width: 0.51rem;
+	height: 0.51rem;
+	margin-left: 0.29rem;
+	margin-top: 0.28rem;
+	float: left;
+}
+.register-nav li input{
+	font-size: 0.32rem;
+	color: #CCCCCC;
+	margin-left: 0.28rem;
+	float: left;
+	margin-top: 0.31rem;
+}
+.register-content{
+	display: block;
+	width: 7.5rem;
+	height: 2.32rem;
+}
+.register-content span{
+	display: block;
+	width: 7rem;
+	height: 0.9rem;
+	background-color: #5156C6;
+	text-align: center;
+	line-height: 0.9rem;
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	border-radius: 10px;
+	float: left;
+	margin-left: 0.25rem;
+	margin-top: 0.66rem;
+}
+.register-content1{
+	display: block;
+	width: 7.5rem;
+	position: relative;
+}
+.register-content1 .content1Detail1{
+	font-size: 0.28rem;
+	color: #a1a1a1;
+	margin-left: 0.28rem;
+	float: left;
+}
+.register-content1 label{
+	font-size: 0.28rem;
+	color: #848faa;
+	float: left;
+	margin-left: 0.24rem;
+}
+.register-content1 .content1Detail2{
+	font-size: 0.28rem;
+	color: #a1a1a1;
+	float: left;
+	margin-left: 0.12rem;
+}
+.register-jump{
+	display: block;
+	width: 4.84rem;
+	height: 1.93rem;
+	background-color: #fff;
+	position: fixed;
+	border-radius: 15px;
+	left: 1.33rem;
+	top: 4.78rem;
+	z-index: 20;
+}
+.register-jump li:first-child{
+	display: block;
+	width: 100%;
+	height: 1.14rem;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: center;
+	line-height: 1.14rem;
+	font-size: 0.28rem;
+	color: #333;
+}
+.register-jump li:nth-child(2) .register-jumpDetail1{
+	display: block;
+	width: 50%;
+	height: 0.5rem;
+	border-right: 1px solid #e5e5e5;
+	float: left;
+	margin-top: 0.15rem;
+	text-align: center;
+	line-height: 0.5rem;
+}
+.register-jump li:nth-child(2) .register-jumpDetail2{
+	display: block;
+	width: 49%;
+	height: 0.5rem;
+	float: right;
+	text-align: center;
+	line-height: 0.5rem;
+	margin-top: 0.15rem;
+	color: #333;
+}
+.register-jumpBg{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+	position: absolute;
+	background-color: #d4d4d4;
+	top: 0;
+	z-index: 10;
+	opacity: 0.3;
+}
+.register-hide{
+	display: none;
+}
+.dataEdit-Save{
+	position: absolute;
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	right: 0.35rem;
+	top: 0.68rem;
+}
+.dataEdit-nav{
+	display: block;
+	width: 7.5rem;
+}
+.dataEdit-nav li{
+	display: block;
+	width: 7.5rem;
+	height: 0.9rem;
+	background-color: #FFFFFF;
+	line-height: 0.9rem;
+	border-bottom: 1px solid #efeff4;
+}
+.dataEdit-nav li label{
+	font-size: 0.32rem;
+	color: #565656;
+	margin-left: 0.31rem;
+	float: left;
+	font-weight: normal;
+	margin-bottom: 0;
+	display: block;
+}
+.dataEdit-nav li input{
+	font-size: 0.3rem;
+	float: right;
+	color: #bbbbbb;
+	margin-right: 0.48rem;
+	width: 5rem;
+	height: 0.9rem;
+	position: relative;
+}
+.dataEdit-nav li:first-child img{
+	display: block;
+	width: 0.8rem;
+	height: 0.8rem;
+	float: right;
+	margin-right: 0.82rem;
+}
+.dataEdit-nav li:nth-child(2) input{
+	margin-right: -1rem;
+}
+.dataEdit-nav li:nth-child(3) input{
+	margin-right: -0.1rem;
+}
+.dataEdit-nav li:nth-child(4) input{
+	margin-right: -0.7rem;
+}
+.dataEdit-nav li:nth-child(2) input::-webkit-input-placeholder{
+	color: #bababa;
+}
+.dataEdit-nav li:nth-child(4) input::-webkit-input-placeholder{
+	color: #bababa;
+}
+.dataEdit-nav li input[value]{
+	display: block;
+	color: #BABABA;
+}
+.dataEdit-nav li:nth-child(3) input[value]{
+	color: #333;
+}
+/*.dataEdit-nav li:first-child{
+	border-bottom: 1px solid #efeff4;
+}*/
+.dataEdit-nav ul{
+	display: block;
+	width: 7.5rem;
+	margin-top: 0.32rem;
+}
+.city-picker-span{
+	position: absolute !important;
+	right: 0;
+	border-bottom: none !important;
+	height: 100% !important;
+}
+.city-picker-dropdown{
+	width: 3.2rem !important;
+	left: 0.45rem !important;
+}
+
+
+
+
+
+
+
+
+/*@media*/
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 42.66px;
+  }
+}
+@media screen and (min-width: 360px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 384px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 51.2px;
+  }
+}
+@media screen and (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 53.34px;
+  }
+}
+@media screen and (min-width: 412px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 54.93px;
+  }
+}
+@media screen and (min-width: 414px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 55.2px;
+  }
+}
+@media screen and (min-width: 424px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 56.54px;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 15.36px;
+  }
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 540px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width: 568px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 75.73px;
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 667px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 88.93px;
+  }
+}
+@media screen and (min-width: 720px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 96px;
+  }
+}
+@media screen and (min-width: 736px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 98.13px;
+  }
+}
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 24px;
+  }
+  html {
+    font-size: 100px;
+  }
+}

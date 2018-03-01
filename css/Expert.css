@@ -1,0 +1,338 @@
+@charset "utf-8";
+html,body,div,ul,ol,li,p,h1,h2,h3,h4,h5,h6,
+form,fieldset,input,textarea,blockquote,table,th,td,
+dl,dt,dd,header,footer,nav,section,article,
+aside {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  position: relative;
+  font:.14rem/1.2 "Microsoft Yahei"
+}
+img {
+  vertical-align: top;
+  border: none;
+  max-width: 100%;
+}
+ul,ol,li {
+  list-style: none;
+}
+input {
+  border: 0;
+  background: none;
+}
+i,em {
+  font-style: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+/*链接样式*/
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  outline: none;
+  blr: expression("this.onFocus=this.blur()");
+}
+/**input type="number" 把那两个按钮去掉**/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="search"] input,
+textarea {
+  -webkit-appearance: none;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+small {
+  font-size: 85%;
+}
+div{
+	margin: 0;
+	padding: 0;
+}
+.ExpertDatabase-Bg{
+	display: block;
+	width: 7.5rem;
+	min-height: 13.34rem;
+	background-color: #F1F1F1;
+	overflow-x: hidden ;
+}
+.ExpertDatabase-header{
+	display: block;
+	width: 7.5rem;
+	height: 1.28rem;
+	background-color:#5056CD ;
+	text-align: center;
+	position: fixed;
+	top: 0;
+}
+.ExpertDatabase-header img{
+	position: absolute;
+	display: block;
+	width: 0.22rem;
+	height: 0.34rem;
+	left: 0.28rem;
+	top: 0.66rem;
+}
+.ExpertDatabase-header .ExpertDatabase-hspan02{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	left: 0.57rem;
+	top: 0.65rem;
+	position: absolute;
+}
+.ExpertDatabase-header .ExpertDatabase-hspan03{
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	vertical-align: -0.7rem;
+}
+.ExpertDatabase-Content,.ExpertDatabase-Content1,.ExpertDatabase-Content2{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+	margin-top: 2.2rem;
+}
+.ExpertDatabase-Content ul,.ExpertDatabase-Content1 ul,.ExpertDatabase-Content2 ul{
+	display: block;
+	width: 7rem;
+	margin-left: 0.25rem;
+	/*background-color: #FFFFFF;*/
+	margin-top: 0.28rem;
+}
+.ExpertDatabase-Content ul li,.ExpertDatabase-Content1 ul li,.ExpertDatabase-Content2 ul li{
+	display: block;
+	width: 7rem;
+	height: 4.05rem;
+	margin-bottom: 0.34rem;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+.ExpertDatabase-Content ul li .ContentTopImg01,.ExpertDatabase-Content1 ul li .ContentTopImg01,.ExpertDatabase-Content2 ul li .ContentTopImg01{
+	display: block;
+	width: 1.01rem;
+	height: 1.01rem;
+	margin-left: 0.19rem;
+	margin-top: 0.4rem;
+	float: left;
+}
+.ExpertDatabase-Content ul li .ContentTop,.ExpertDatabase-Content1 ul li .ContentTop,.ExpertDatabase-Content2 ul li .ContentTop{
+	display: block;
+	width: 7.5rem;
+	height: 3.35rem;
+	border-bottom: 1px solid #E8E8E8;
+}
+.ExpertDatabase-Content ul li .ContentTop .ContentTopSpan01,.ExpertDatabase-Content1 ul li .ContentTop .ContentTopSpan01,.ExpertDatabase-Content2 ul li .ContentTop .ContentTopSpan01{
+	font-size: 0.32rem;
+	color: #404040;
+	float: left;
+	margin-left: 0.24rem;
+	margin-top: 0.39rem;
+}
+.ExpertDatabase-Content ul li .ContentTop label,.ExpertDatabase-Content1 ul li .ContentTop label,.ExpertDatabase-Content2 ul li .ContentTop label{
+	font-size: 0.28rem;
+	color: #666666;
+	margin-left: 0.5rem;
+	margin-top: 0.41rem;
+	float: left;
+}
+.ExpertDatabase-Content ul li .ContentTop p,.ExpertDatabase-Content1 ul li .ContentTop p,.ExpertDatabase-Content2 ul li .ContentTop p{
+	font-size: 0.26rem;
+	color: #a8a8a8;
+	display: block;
+	width: 5.4rem;
+	height: 1.6rem;
+	float: left;
+	margin-left: 0.23rem;
+	margin-top: 0.36rem;
+}
+.ExpertDatabase-Content ul li .ContentTop .ContentTopBo,.ExpertDatabase-Content1 ul li .ContentTop .ContentTopBo,.ExpertDatabase-Content2 ul li .ContentTop .ContentTopBo{
+	display: block;
+	width: 5.6rem;
+	height: 0.5rem;
+	float: left;
+	margin-left: 1.4rem;
+}
+.ContentTopBo .ContentTopSpan02{
+	font-size: 0.26rem;
+	color: #A8A8A8;
+	float: left;
+}
+.ExpertDatabase-Content ul li  .ContentTopBo label,.ExpertDatabase-Content1 ul li  .ContentTopBo label,.ExpertDatabase-Content2 ul li  .ContentTopBo label{
+	font-size: 0.24rem;
+	color: #f85915;
+	display: block;
+	padding: 0.05rem 0.12rem 0.05rem 0.12rem;
+	border: 1px solid #F85915;	
+	border-radius: 5px;
+	margin-left: 0.16rem;
+	float: left;
+	margin-top: 0rem;
+	margin-right: 0.16rem;
+}
+.contentBottom{
+	display: block;
+	width: 7rem;
+	height: 0.7rem;
+	line-height: 0.7rem;
+}
+.contentBottom span{
+	font-size: 0.28rem;
+	color: #f85915;
+	float: left;
+	margin-left: 1.45rem;
+}
+.contentBottom label{
+	font-size: 0.28rem;
+	color: #666666;
+	margin-left: 0.5rem;
+}
+
+
+
+
+
+/*@media*/
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 42.66px;
+  }
+}
+@media screen and (min-width: 360px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 384px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 51.2px;
+  }
+}
+@media screen and (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 53.34px;
+  }
+}
+@media screen and (min-width: 412px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 54.93px;
+  }
+}
+@media screen and (min-width: 414px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 55.2px;
+  }
+}
+@media screen and (min-width: 424px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 56.54px;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 15.36px;
+  }
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 540px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width: 568px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 75.73px;
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 667px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 88.93px;
+  }
+}
+@media screen and (min-width: 720px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 96px;
+  }
+}
+@media screen and (min-width: 736px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 98.13px;
+  }
+}
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 24px;
+  }
+  html {
+    font-size: 100px;
+  }
+}

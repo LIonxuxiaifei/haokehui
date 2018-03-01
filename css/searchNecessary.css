@@ -1,0 +1,566 @@
+@charset "utf-8";
+html,body,div,ul,ol,li,p,h1,h2,h3,h4,h5,h6,
+form,fieldset,input,textarea,blockquote,table,th,td,
+dl,dt,dd,header,footer,nav,section,article,
+aside {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  position: relative;
+  font:.14rem/1.2 "Microsoft Yahei"
+}
+img {
+  vertical-align: top;
+  border: none;
+  max-width: 100%;
+}
+ul,ol,li {
+  list-style: none;
+}
+input {
+  border: 0;
+  background: none;
+}
+i,em {
+  font-style: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+/*链接样式*/
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  outline: none;
+  blr: expression("this.onFocus=this.blur()");
+}
+/**input type="number" 把那两个按钮去掉**/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="search"] input,
+textarea {
+  -webkit-appearance: none;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+small {
+  font-size: 85%;
+}
+div{
+	margin: 0;
+	padding: 0;
+}
+.searchNecessary-Bg{
+	display: block;
+	width: 7.5rem;
+	min-height: 13.34rem;
+	background-color: #F1F1F1;
+}
+.searchNecessary-header{
+	display: block;
+	width: 7.5rem;
+	height: 1.28rem;
+	background-color: #5056cd;
+	position: relative;
+	float: left;
+}
+.searchNecessary-header img{
+	display: block;
+	width: 0.22rem;
+	height: 0.34rem;
+	position: absolute;
+	left: 0.28rem;
+	top: 0.67rem;
+}
+.searchNecessary-box{
+	position: relative;
+	display: block;
+	width: 5.35rem;
+	height: 0.46rem;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	margin-left: 1.08rem;
+	margin-top: 0.68rem;
+}
+.searchNecessary-header .sN-dropDownImg{
+	display: block;
+	width: 0.17rem;
+	height: 0.12rem;
+	left: 0.22rem;
+	top: 0.2rem;
+	position: absolute;
+}
+.searchNecessary-header .searchNecessary-box input{
+	display: block;
+	width: 80%;
+	height: 0.3rem;
+	margin-left: 0.75rem;
+	margin-top: 0.1rem;
+	float: left;
+}
+.searchNecessary-header label{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	position: absolute;
+	top: 0.7rem;
+	right: 0.27rem;
+}
+.searchNecessary-content{
+	display: block;
+	width: 7.5rem;
+	min-height: 0.9rem;
+	background-color: #FFFFFF;
+	float: left;
+	text-align: center;
+	line-height: 0.9rem;
+	font-size: 0.3rem;
+	color: #808080;
+}
+
+
+
+/*发布需求*/
+.postDemand-header{
+	display: block;
+	width: 7.5rem;
+	height: 1.26rem;
+	background-color: #5156C6;
+	text-align: center;
+	position: relative;
+}
+.postDemand-header img{
+	position: absolute;
+	display: block;
+	width: 0.22rem;
+	height: 0.34rem;
+	left: 0.28rem;
+	top: 0.66rem;
+}
+.postDemand-header .postDemand-hspan02{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	left: 0.57rem;
+	top: 0.65rem;
+	position: absolute;
+}
+.postDemand-header .postDemand-hspan03{
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	vertical-align: -0.7rem;
+}
+.postDemand-header .postDemand-Save{
+	position: absolute;
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	right: 0.35rem;
+	top: 0.68rem;
+}
+.postDemand-content{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+}
+.postDemand-content textarea{
+	display: block;
+	width: 7rem;
+	min-height: 2rem;
+	border: none;
+	overflow: hidden;
+	resize: none;
+	margin-left: 0.25rem;
+	margin-top: 0.4rem;
+}
+.postDemand-content textarea::-webkit-input-placeholder{
+	color: #BBBBBB;
+	font-size: 0.3rem;
+}
+.postDemand-content span{
+	display: block;
+	width: 1.2rem;
+	height: 1.2rem;
+	border: 2px solid #BBBBBB;
+	text-align: center;
+	line-height: 1.2rem;
+	font-size: 0.6rem;
+	color: #BBBBBB;
+	margin-left: 0.3rem;
+}
+
+
+
+
+
+/*发布成果*/
+.pResults-header{
+	display: block;
+	width: 7.5rem;
+	height: 1.26rem;
+	background-color: #5156C6;
+	text-align: center;
+	position: relative;
+}
+.pResults-header img{
+	position: absolute;
+	display: block;
+	width: 0.22rem;
+	height: 0.34rem;
+	left: 0.28rem;
+	top: 0.66rem;
+}
+.pResults-header .pResults-hspan02{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	left: 0.57rem;
+	top: 0.65rem;
+	position: absolute;
+}
+.pResults-header .pResults-hspan03{
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	vertical-align: -0.7rem;
+}
+.pResults-header .pResults-Save{
+	position: absolute;
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	right: 0.35rem;
+	top: 0.68rem;
+}
+.pResults-content{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+}
+.pResults-content textarea{
+	display: block;
+	width: 7rem;
+	min-height: 2rem;
+	border: none;
+	overflow: hidden;
+	resize: none;
+	margin-left: 0.25rem;
+	margin-top: 0.4rem;
+}
+.pResults-content textarea::-webkit-input-placeholder{
+	color: #BBBBBB;
+	font-size: 0.3rem;
+}
+.pResults-content span{
+	display: block;
+	width: 1.2rem;
+	height: 1.2rem;
+	border: 2px solid #BBBBBB;
+	text-align: center;
+	line-height: 1.2rem;
+	font-size: 0.6rem;
+	color: #BBBBBB;
+	margin-left: 0.3rem;
+}
+
+
+
+
+
+/*查找技术*/
+.searchTech-header .searchTech-search{
+	display: inline-block;
+	width: 5rem;
+	height: 0.55rem;
+	background-color: #eeeeee;
+	border-radius: 15px;
+	margin-left: 0.55rem;
+	margin-top: 0.55rem;
+}
+.searchTech-search .searchImg{
+	display: inline-block;
+	width: 0.26rem;
+	height: 0.25rem;
+	float: left;
+	margin-left: 0.2rem;
+	margin-top: 0.17rem;
+}
+.searchTech-search input{
+	font-size: 0.22rem;
+	color: #808080;
+	float: left;
+	margin-left: 0.17rem;
+	margin-top: 0.17rem;
+}
+.searchTech-header{
+	display: block;
+	width: 7.5rem;
+	height: 1.26rem;
+	background-color: #FFFFFF;
+	text-align: center;
+	position: fixed;
+	border-bottom: 1px solid #cccccc;
+	top: 0;
+}
+.searchTech-header .searchTech-Img01{
+	position: absolute;
+	display: block;
+	width: 0.22rem;
+	height: 0.34rem;
+	left: 0.28rem;
+	top: 0.66rem;
+}
+.searchTech-header label{
+	font-size: 0.3rem;
+	color: #000000;
+	position: absolute;
+	left: 0.57rem;
+	top: 0.65rem;
+}
+.searchTech-nav{
+	display: block;
+	width: 7.5rem;
+	height: 0.72rem;
+	background-color: #FFFFFF;
+	position: fixed;
+	top: 1.26rem;
+}
+.searchTech-nav ul{
+	display: block;
+	width: 90%;
+	margin-left: 5%;
+}
+.searchTech-nav li{
+	width: 33.3%;
+	height: 0.72rem;
+	float: left;
+	line-height: 0.72rem;
+	text-align: center;
+}
+.searchTech-nav li span{
+	display: block;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 0.3rem;
+	color: #808080;
+}
+.searchTech-colorChange{
+	border-bottom: 2px solid #F4878F;
+	color: #F4878F !important;
+}
+
+
+
+.searchTech-Bg{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+	background-color: #F1F1F1;
+}
+.searchTech-content1,.searchTech-content2,.searchTech-content3{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+}
+.searchTech-content1 ul,.searchTech-content2 ul,.searchTech-content3 ul{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+	margin-top: 1.98rem;
+	background-color: #f1f1f7;
+}
+.searchTech-content1 ul li,.searchTech-content2 ul li,.searchTech-content3 ul li{
+	display: block;
+	width: 7.5rem;
+	height: 2.82rem;
+	background-color: #FFFFFF;
+	float: left;
+	border-bottom: 0.15rem solid #F1F1F1;
+	/*margin-bottom: 0.15rem;*/
+}
+.searchTech-content1 ul li:first-child,.searchTech-content2 ul li:first-child,.searchTech-content3 ul li{
+	margin-top: 0.15rem;
+}
+.searchTech-content1 ul li img,.searchTech-content2 ul li img,.searchTech-content3 ul li img{
+	display: block;
+	width: 0.66rem;
+	height: 0.66rem;
+	float: left;
+	margin-left: 0.26rem;
+	margin-top: 0.08rem;
+}
+.searchTech-content1 ul li span,.searchTech-content2 ul li span,.searchTech-content3 ul li span{
+	font-size: 0.26rem;
+	color: #808080;
+	float: left;
+	margin-left: 0.26rem;
+	margin-top: 0.32rem;
+}
+.searchTech-content1 ul li label,.searchTech-content2 ul li label,.searchTech-content3 ul li label{
+	font-size: 0.3rem;
+	color: #2A2A2A;
+	font-weight: bold;
+	display: block;
+	width: 7.5rem;
+	float: left;
+	margin-top: 0.23rem;
+	margin-left: 0.25rem;
+}
+.searchTech-content1 ul li p,.searchTech-content2 ul li p,.searchTech-content3 ul li p{
+	font-size: 0.24rem;
+	color: #808080;
+	display: block;
+	width: 7.04rem;
+	float: left;
+	margin-left: 0.26rem;
+	margin-top: 0.23rem;
+}
+/*.dataEdit-nav li:nth-child(2) input::-webkit-input-placeholder{
+	color: #bababa;
+}*/
+
+
+
+
+.hide{
+	display: none;
+}
+/*@media*/
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 42.66px;
+  }
+}
+@media screen and (min-width: 360px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 384px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 51.2px;
+  }
+}
+@media screen and (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 53.34px;
+  }
+}
+@media screen and (min-width: 412px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 54.93px;
+  }
+}
+@media screen and (min-width: 414px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 55.2px;
+  }
+}
+@media screen and (min-width: 424px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 56.54px;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 15.36px;
+  }
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 540px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width: 568px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 75.73px;
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 667px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 88.93px;
+  }
+}
+@media screen and (min-width: 720px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 96px;
+  }
+}
+@media screen and (min-width: 736px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 98.13px;
+  }
+}
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 24px;
+  }
+  html {
+    font-size: 100px;
+  }
+}

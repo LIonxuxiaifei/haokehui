@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>科技进展</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="format-detection" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<link rel="stylesheet" href="../css/haokehui.css" />
+		<link rel="stylesheet" href="../css/ScienceProgress.css" />
+	</head>
+	<body>
+		<div class="ScienceProgress-Bg" >
+			<div class="ScienceProgress-header">
+				<a href="javascript:history.back(-1)"><img src="../image/turnBack.png" /></a>
+				<span>科技进展</span>
+				<a href="javascript:history.back(-1)"><label>返回</label></a>
+			</div>
+			<div class="ScienceProgress-nav">
+				<ul>
+					<li>
+						<span class="SP-colorChange">推荐</span>
+					</li>
+					<li>
+						<span>热点</span>
+					</li>
+					<li>
+						<span>中药</span>
+					</li>
+					<li>
+						<span>医药</span>
+					</li>
+					<li>
+						<span>食品</span>
+					</li>
+					<li>
+						<span>保健品</span>
+					</li>
+				</ul>
+			</div>
+			
+			
+			
+			<div class="ScienceProgress-content" >
+				<ul  id="cube4">
+					<li v-for="item in list4">
+						<!--<a href="PolicyNewsDetail.html"><span>坚定不移打造“世界中医药之都”</span></a>-->
+						<span>{{item.title}}</span>
+						<img src="../image/offshore/ScienceProgress01.png" />
+						<!--<img  v-bind:src="item.originImages" />-->
+						<div class="ScienceProgress-contentBottom">
+							<label class="ScienceProgress-label1">hot</label>
+							<label>0评论</label>
+							<label>0转发</label>
+							<label>刚刚</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<!--<div id="cube5">-->
+			<!--科技进展中的热点-->
+			<div class="ScienceProgress-content1 hide">
+				<ul id="cube5">
+					<li v-for="item in list5">
+						<!--<a href="PolicyNewsDetail.html"><span>中国药科大学李萍组在中药药 效物质基础研究领取取得重要 进展</span></a>-->
+						<span>{{item.title}}</span>
+						<img src="../image/offshore/ScienceProgress02.png" />
+						<div class="ScienceProgress-contentBottom">
+							<label>0评论</label>
+							<label>0转发</label>
+							<label>刚刚</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			
+			<!--中药-->
+			<div class="ScienceProgress-content2 hide">
+				<ul id="cube6">
+					<li v-for="item in list6">
+						<!--<span>王国强：中医药发展列为国家 战略具备有力的条件和良好的 时机</span>-->
+						<span>{{item.title}}</span>
+						<img src="../image/offshore/ScienceProgress03.png" />
+						<div class="ScienceProgress-contentBottom">
+							<label class="ScienceProgress-label1">hot</label>
+							<label>0评论</label>
+							<label>0转发</label>
+							<label>刚刚</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			
+			<!--医药-->
+			<div class="ScienceProgress-content3 hide">
+				<ul id="cube7">
+					<li v-for="item in list7">
+						<!--<span>中国药科大学李萍组在中药药 效物质基础研究领取取得重要 进展</span>-->
+						<span>{{item.title}}</span>
+						<img src="../image/offshore/ScienceProgress01.png" />
+						<div class="ScienceProgress-contentBottom">
+							<label class="ScienceProgress-label1">hot</label>
+							<label>0评论</label>
+							<label>0转发</label>
+							<label>刚刚</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			
+			
+			<!--食品-->
+			<div class="ScienceProgress-content4 hide">
+				<ul id="cube8">
+					<li v-for="item in list8">
+						<!--<span>中国药科大学李萍组在中药药 效物质基础研究领取取得重要 进展</span>-->
+						<span>{{item.title}}</span>
+						<img src="../image/offshore/ScienceProgress05.png" />
+						<div class="ScienceProgress-contentBottom">
+							<label class="ScienceProgress-label1">hot</label>
+							<label>0评论</label>
+							<label>0转发</label>
+							<label>刚刚</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			
+			
+			
+			<!--保健品-->
+			<div class="ScienceProgress-content5 hide">
+				<ul id="cube9">
+					<li v-for="item in list9">
+						<!--<span>中国药科大学李萍组在中药药 效物质基础研究领取取得重要 进展</span>-->
+						<span>{{item.title}}</span>
+						<img src="../image/offshore/ScienceProgress01.png" />
+						<div class="ScienceProgress-contentBottom">
+							<label>0评论</label>
+							<label>0转发</label>
+							<label>刚刚</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<!--</div>-->
+		</div>
+		
+		
+		<!--返回到顶部-->
+		<div id="returnTop" draggable="true" class="returnTop visiable hide">
+			<a href="#javascript:;"></a>
+		</div>
+		
+		<script type="text/javascript" src="../script/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="../script/vue.min.js"></script>
+		<script type="text/javascript" src="../script/vue-resource.min.js"></script>
+		<script type="text/javascript" src="../script/imglazy.js"></script>
+		<script type="text/javascript" src="../script/haokehui.js"></script>
+		<script>
+			
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':7
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(pageList)
+   					new Vue({
+   						el:'#cube4',
+   						data:{
+		            		list4: pageList
+		        		},
+   					})
+   					
+   						
+   						
+   						$("#cube4").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+
+
+//		科技进展页面切换
+		$(function(){
+			$(".ScienceProgress-nav").find("li").mousemove(function(){
+				$(this).find("span").addClass("SP-colorChange")
+				$(this).siblings().children("span").removeClass("SP-colorChange")
+				var index=$(this).index()
+				if(index==0){
+					var scienceId=7
+					$(".ScienceProgress-content").removeClass("hide")
+					$(".ScienceProgress-content1,.ScienceProgress-content2,.ScienceProgress-content3,.ScienceProgress-content4,.ScienceProgress-content5").addClass("hide")
+	//			科技进展页面点击切换换新闻
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':7
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+   					console.log(data)
+					var pageList=data.data.page.list
+					console.log(pageList)
+   					new Vue({
+   						el:'#cube4',
+   						data:{
+		            		list4: pageList
+		        		},
+   					})
+   					
+   						
+   						$("#cube4").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+   			
+//			科技进展页面点击切换换新闻
+				}else if(index==1){
+					var scienceId=8
+					$(".ScienceProgress-content1").removeClass("hide")
+					$(".ScienceProgress-content,.ScienceProgress-content2,.ScienceProgress-content3,.ScienceProgress-content4,.ScienceProgress-content5").addClass("hide")
+				//			科技进展页面点击切换换新闻
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':8
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+   					console.log(data)
+					var pageList=data.data.page.list
+					console.log(pageList)
+   					new Vue({
+   						el:'#cube5',
+   						data:{
+		            		list5: pageList
+		        		},
+   					})
+   					
+   						
+   						$("#cube5").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+   			
+//			科技进展页面点击切换换新闻
+				}else if(index==2){
+					var scienceId=9
+					$(".ScienceProgress-content2").removeClass("hide")
+					$(".ScienceProgress-content1,.ScienceProgress-content,.ScienceProgress-content3,.ScienceProgress-content4,.ScienceProgress-content5").addClass("hide")
+				//			科技进展页面点击切换换新闻
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':9
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+   					console.log(data)
+					var pageList=data.data.page.list
+					console.log(pageList)
+   					new Vue({
+   						el:'#cube6',
+   						data:{
+		            		list6: pageList
+		        		},
+   					})
+   					
+   						
+   						$("#cube6").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+   			
+//			科技进展页面点击切换换新闻
+				}else if(index==3){
+					var scienceId=10
+					$(".ScienceProgress-content3").removeClass("hide")
+					$(".ScienceProgress-content1,.ScienceProgress-content2,.ScienceProgress-content5,.ScienceProgress-content4,.ScienceProgress-content").addClass("hide")
+				//			科技进展页面点击切换换新闻
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':10
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+   					console.log(data)
+					var pageList=data.data.page.list
+					console.log(pageList)
+   					new Vue({
+   						el:'#cube7',
+   						data:{
+		            		list7: pageList
+		        		},
+   					})
+   					
+   						
+   						$("#cube7").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+   			
+//			科技进展页面点击切换换新闻
+				}else if(index==4){
+					var scienceId=11
+					$(".ScienceProgress-content4").removeClass("hide")
+					$(".ScienceProgress-content1,.ScienceProgress-content2,.ScienceProgress-content3,.ScienceProgress-content,.ScienceProgress-content5").addClass("hide")
+				//			科技进展页面点击切换换新闻
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':11
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+   					console.log(data)
+					var pageList=data.data.page.list
+					console.log(pageList)
+   					new Vue({
+   						el:'#cube8',
+   						data:{
+		            		list8: pageList
+		        		},
+   					})
+   					
+   						
+   						$("#cube8").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+   			
+//			科技进展页面点击切换换新闻
+				}else if(index==5){
+					var scienceId=12
+					$(".ScienceProgress-content5").removeClass("hide")
+					$(".ScienceProgress-content1,.ScienceProgress-content2,.ScienceProgress-content3,.ScienceProgress-content4,.ScienceProgress-content").addClass("hide")
+				//			科技进展页面点击切换换新闻
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':12
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+   					console.log(data)
+					var pageList=data.data.page.list
+					console.log(pageList)
+			
+   					new Vue({
+   						el:'#cube9',
+   						data:{
+		            		list9: pageList
+		        		},
+   					})
+   					
+   						
+   						$("#cube9").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+   			
+//			科技进展页面点击切换换新闻
+				}
+//			科技进展页面点击切换换新闻
+//			$.ajax({
+// 				url:"http://47.100.46.113:8080/app/news/list",
+// 				data:{
+// 					'page.current':1,
+//                  'page.total':8,
+//                  'channelId':scienceId
+// 				},
+// 				dataType:"json",
+// 				type:"get",
+// 				async:true,
+// 				success:function(data){
+// 					console.log(data)
+//					var pageList=data.data.page.list
+//					console.log(pageList)
+// 					new Vue({
+// 						el:'#cube5',
+// 						data:{
+//		            		list5: pageList
+//		        		},
+// 					})
+// 					
+// 						
+// 						$("#cube5").find("li").click(function(){
+// 						var column=$(this).index()
+// 						console.log(column)
+// 						var newsId=pageList[column].id;
+// 						console.log(newsId)
+// 						var url1="new_file.html?id="
+// 						var url2=newsId
+// 						var url3=url1+url2
+// 						console.log(url3)
+// 						window.location.href=url3
+// 					})
+//
+// 				}
+// 			});
+   			
+//			科技进展页面点击切换换新闻
+			})
+		})
+		</script>
+	</body>
+</html>

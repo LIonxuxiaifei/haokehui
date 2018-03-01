@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" charset="UTF-8">
+		<title>会议通知</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="format-detection" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<link rel="stylesheet" type="text/css" href="./../css/haokehui.css" />
+		<link rel="stylesheet"  type="text/css" href="./../css/font.css">
+		<!--<link href="fonts/a.ttf" />-->
+		<style>
+			.MnContent1 li span{
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="MnHeader">
+			<a href="#" onclick="javascript:window.history.back(-1)"><img src="./../image/turnBack.png" /></a>
+			<a href="#" onclick="javascript:window.history.back(-1)"><span>返回</span></a>
+			<label>会议通知</label>
+		</div>
+		<div class="MnContent1">
+			<ul id="cubeB">
+				<li v-for="item in listB">
+					<span>{{item.title}}</span>
+					<img src="./../image/NP1.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>安徽省食品监督管理局召开全省药品GMP研讨会</span></a>
+					<img src="./../image/NP1.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>安徽省食品监督管理局召开全省药品GMP研讨会</span></a>
+					<img src="./../image/NP1.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>安徽省食品监督管理局召开全省药品GMP研讨会</span></a>
+					<img src="./../image/NP1.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>	-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>安徽省食品监督管理局召开全省药品GMP研讨会</span></a>
+					<img src="./../image/NP1.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>安徽省食品监督管理局召开全省药品GMP研讨会</span></a>
+					<img src="./../image/NP1.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>	-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>安徽省食品监督管理局召开全省药品GMP研讨会</span></a>
+					<img src="./../image/NP1.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>	-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>安徽省食品监督管理局召开全省药品GMP研讨会</span></a>
+					<img src="./../image/NP1.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>	-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>安徽省食品监督管理局召开全省药品GMP研讨会</span></a>
+					<img src="./../image/NP1.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>					-->
+			</ul>
+		</div>
+		
+       			<!--返回到顶部-->
+		<div id="returnTop" draggable="true" class="returnTop visiable hide">
+			<a href="#javascript:;"></a>
+		</div>
+		
+		<script type="text/javascript" src="../script/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="../script/vue.min.js"></script>
+		<script type="text/javascript" src="../script/vue-resource.min.js"></script>
+		<script type="text/javascript" src="../script/imglazy.js"></script>
+		<script type="text/javascript" src="../script/haokehui.js"></script>
+		<script type="text/javascript" src="../script/api.js"></script>
+		<script>
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':5
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(data)
+   					new Vue({
+   						el:'#cubeB',
+   						data:{
+		            		listB: pageList
+		        		},
+   					})
+   					
+   						
+   						
+   						$("#cubeB").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file2.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+		</script>
+	</body>
+</html>

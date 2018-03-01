@@ -1,0 +1,316 @@
+@charset "utf-8";
+html,body,div,ul,ol,li,p,h1,h2,h3,h4,h5,h6,
+form,fieldset,input,textarea,blockquote,table,th,td,
+dl,dt,dd,header,footer,nav,section,article,
+aside {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  position: relative;
+  font:.14rem/1.2 "Microsoft Yahei"
+}
+img {
+  vertical-align: top;
+  border: none;
+  max-width: 100%;
+}
+ul,ol,li {
+  list-style: none;
+}
+input {
+  border: 0;
+  background: none;
+}
+i,em {
+  font-style: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+/*链接样式*/
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  outline: none;
+  blr: expression("this.onFocus=this.blur()");
+}
+/**input type="number" 把那两个按钮去掉**/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="search"] input,
+textarea {
+  -webkit-appearance: none;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+small {
+  font-size: 85%;
+}
+div{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+.loginOut-Bg{
+	display: block;
+	width: 7.5rem;
+	min-height: 13.34rem;
+	background-color: #FFFFFF;
+	overflow-x: hidden;
+}
+.loginOut-header{
+	display: block;
+	width: 7.5rem;
+	height: 1.28rem;
+	background-color: #5056CD;
+	text-align: center;
+	position: relative;
+}
+.loginOut-header img{
+	position: absolute;
+	display: block;
+	width: 0.22rem;
+	height: 0.34rem;
+	left: 0.28rem;
+	top: 0.66rem;
+}
+.loginOut-header label{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	left: 0.57rem;
+	top: 0.65rem;
+	position: absolute;
+}
+.loginOut-header span{
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	vertical-align: -0.7rem;
+}
+.loginOut-content{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+	margin-top: 0.25rem;
+}
+.loginOut-content ul{
+	display: block;
+	width: 7.2rem;
+	height: 100%;
+	margin-left: 0.3rem;
+}
+.loginOut-content ul li{
+	display: block;
+	width: 7.2rem;
+	height: 1.05rem;
+	border-bottom: 1px solid #efeff4;
+	line-height: 1.05rem;
+}
+.loginOut-content ul li span{
+	font-size: 0.32rem;
+	color: #666;
+}
+.loginOut-content .loginOut-contentImg01{
+	display: block;
+	width: 0.45rem;
+	height: 0.45rem;
+	float: right;
+	margin-right: 0.3rem;
+	margin-top: 0.32rem;
+}
+.loginOut-content2{
+	display: block;
+	width: 7rem;
+	height: 0.95rem;
+	background-color: #01a3e1;
+	margin-left: 0.25rem;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 0.95rem;
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	margin-top: 0.5rem;
+}
+.loginOut-content label{
+	font-size: 0.32rem;
+	color: #333333;
+	float: right;
+	margin-right: 0.26rem;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 375px){
+  .x-joinVipMainBottom li.active{
+    min-height: 5.2rem;
+  }
+}
+/*@media*/
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 42.66px;
+  }
+}
+@media screen and (min-width: 360px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 384px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 51.2px;
+  }
+}
+@media screen and (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 53.34px;
+  }
+}
+@media screen and (min-width: 412px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 54.93px;
+  }
+}
+@media screen and (min-width: 414px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 55.2px;
+  }
+}
+@media screen and (min-width: 424px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 56.54px;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 15.36px;
+  }
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 540px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width: 568px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 75.73px;
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 667px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 88.93px;
+  }
+}
+@media screen and (min-width: 720px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 96px;
+  }
+}
+@media screen and (min-width: 736px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 98.13px;
+  }
+}
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 24px;
+  }
+  html {
+    font-size: 100px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

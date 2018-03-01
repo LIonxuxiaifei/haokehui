@@ -1,66 +1,309 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
-    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
-    <title>Hello APP</title>
-    <link rel="stylesheet" type="text/css" href="../css/api.css" />
-	<style>
-		#con{
-			margin: 10px;
-			font-size: 24px; 
-		}
-		ul{
-			margin-bottom: 10px;
-		}
-		ul li{ 
-			margin: 5px 10px;
-			padding: 5px;
-			color: #000;
-			word-wrap: break-word;
-		}
-	</style>
-</head>
-<body>
-    <label id="con">Hello APP</label>
-	<div id='sys-info'></div>
-</body>
-<script type="text/javascript" src="../script/api.js"></script>
-<script type="text/javascript">
-    apiready = function(){
-		var ver = api.version;
-		var sType = api.systemType;
-		var sVer = api.systemVersion;
-		var id = api.deviceId;
-		var model = api.deviceModel;
-		var name = api.deviceName;
-		var cType = api.connectionType;
-		var winName = api.winName;
-		var winWidth = api.winWidth;
-		var winHeight = api.winHeight;
-		var frameName = api.frameName || '';
-		var frameWidth = api.frameWidth || '';
-		var frameHeight = api.frameHeight || '';
+	<head>
+		<meta http-equiv="content-type" charset="UTF-8">
+		<title>毫科汇</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="format-detection" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="./../css/haokehui.css" />
+		<link rel="stylesheet"  type="text/css" href="./../css/font.css">
+		<!--<link href="fonts/a.ttf" />-->
 
-		var str = '<ul>';
-		str += '<li>引擎版本信息: ' + ver + '</li>';
-		str += '<li>系统类型: ' + sType + '</li>';
-		str += '<li>系统版本: ' + sVer + '</li>';
-		str += '<li>设备标识: ' + id + '</li>';
-		str += '<li>设备型号: ' + model + '</li>';
-		str += '<li>设备名称: ' + name + '</li>';
-		str += '<li>网络状态: ' + cType + '</li>';
-		str += '<li>主窗口名字: ' + winName + '</li>';
-		str += '<li>主窗口宽度: ' + winWidth + '</li>';
-		str += '<li>主窗口高度: ' + winHeight + '</li>';
-		str += '<li>子窗口名字: ' + frameName + '</li>';
-		str += '<li>子窗口宽度: ' + frameWidth + '</li>';
-		str += '<li>子窗口高度: ' + frameHeight + '</li>';
-		str += '</ul>';
+		
+		<style>
+			.xxhaha{
+				display: block;
+				width: 7.5rem;
+				height: 0.5rem;
+				position: fixed;
+				top: 0;
+				background-color: #5156c6;
+				z-index: 20;
+			}
+			.header{
+				top: 0.5rem;
+			}
+			.content{
+				margin-top: 1.38rem;
+			}
+			
+			
+			/*新闻*/
+			.content3 ul{
+				width: 7.5rem;
+			}
+			.content3Detail2 li{
+				display: block;
+				width: 7.23rem;
+				height: 2.3rem;
+				background-color: #FFFFFF;
+				border-bottom: 1px solid #E8E8E8;
+				float: left;
+				margin-left: 0.135rem;
+				margin-bottom: 1rem;
+			}
+			.content3Detail2 li span{
+				font-size: 0.34rem;
+				color: #2A2A2A;
+				font-weight: 500;
+				width: 4rem;
+				margin-top: 0.5rem;
+				float: left;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+				margin-left: 0.1rem;
+			}
+			.content3Detail2 li img{
+				display: block;
+				width: 2.6rem;
+				height: 1.7rem;
+				float: right;
+				margin-right: 0.26rem;
+				margin-top: 0.3rem;
+			}
+			.content3Detail2 li label{
+				display: block;
+				float: left;
+				margin-top: 0.6rem;
+				margin-right: 0.3rem;
+				font-size: 0.22rem;
+				color: #808080;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="xxhaha"></div>
+		
+		<div class="header">
+			<span class="hSpan1" style="font-family: mzd;">亳科汇</span>
+			<!--<span class="hSpan1" style="font-family:default;font-weight: bold; ">亳科汇</span>-->
+			<div class="search">
+				<img src="./../image/Search@3x.png" class="searchImg">
+				<input placeholder="搜索" />
+				<!--<span>搜索</span>-->
+			</div>
+		</div>
+		<div class="content">
+			<!--<ul>
+				<li><img src="./../image/img01.png"></li>
+			</ul>-->
+			
+			
+				<!--carousel-->
+			  <div id="slidershow" class="carousel slide" style="width:7.5rem; height: 3.28rem !important;">
+			    <!-- 设置图片轮播的顺序 -->
+			    <ol class="carousel-indicators">
+			        <li class="active" data-target="#slidershow" data-slide-to="0">1</li>
+			        <li data-target="#slidershow" data-slide-to="1">2</li>
+			        <li data-target="#slidershow" data-slide-to="2">3</li>
+			    </ol>
+			    <!-- 设置轮播图片 -->
+			    <div class="carousel-inner">
+			        <div class="item active">
+			            <a href="##"><img src="./../image/img01.png"   alt=""></a>
+			            <!--<div class="carousel-caption">
+			                <h3>图片标题1</h3>
+			                <p>描述内容1...</p>
+			            </div>-->
+			        </div>
+			        <div class="item">
+			            <a href="##"><img src="./../image/ProjectApp01.png" width=300 height=200 alt=""></a>
+			            <!--<div class="carousel-caption">
+			                <h3>图片标题2</h3>
+			                <p>描述内容2...</p>
+			            </div>-->
+			        </div>
+			        <div class="item">
+			            <a href="##"><img src="../image/PolicyNews01.png" width=300 height=200  alt=""></a>
+			            <!--<div class="carousel-caption">
+			                <h3>图片标题3</h3>
+			                <p>描述内容3...</p>
+			            </div>-->
+			        </div>
+			    </div>
+			    <a class="left carousel-control " href="#slidershow" role="button" data-slide="prev">
+			        <span class="glyphicon glyphicon-chevron-left"></span>
+			    </a>
+			    <a class="right carousel-control" href="#slidershow" role="button" data-slide="next">
+			        <span class="glyphicon glyphicon-chevron-right"></span>
+			    </a>
+			  </div>
+			  <!--carousel-->
+  
+  
+  
+		</div>
 
-		$api.byId('sys-info').innerHTML = str;
+		<div class="content1">
+			<span>头条</span>
+			<p>亳州人民喜迎十九大开幕并认真学习  ...</p>
+			<img src="./../image/Turnthepage@3x.png" >
+		</div>
+		<div class="content2">
+			<div class="content2Detail">
+				<img src="./../image/Popularservice.png">
+				<span>热门服务</span>
+			</div>
+			<ul class="content2Detail2">
+				<li>
+					<a href="PolicyNews.html">
+					<img src="./../image/Policynews.png">
+					<span>政策新闻</span>
+					</a>
+				</li>
+				<li>
+					<a href="ScienceProgress.html">
+					<img src="./../image/Scienceandtechnologyprogress.png">
+					<span>科技进展</span>
+					</a>
+				</li>
+				<li>
+					<a href="Projectapplication.html">
+					<img src="./../image/Projectapplication.png">
+					<span>项目申请</span>
+					</a>
+				</li>
+				
+				<li>
+					<a href="Meetingnotice.html">
+					<img src="./../image/Meetingnotice.png">
+					<span>会议通知</span>
+					</a>
+				</li>
+				
+				<li>
+					<a href="PatentResult.html">
+					<img src="./../image/Patentresults.png">
+					<span>专利成果</span>
+					</a>
+				</li>
+				<li>
+					<a href="ExpertDatabase.html">
+					<img src="./../image/Expertdatabase.png">
+					<span>&nbsp;&nbsp;专家库</span>
+					</a>
+				</li>
+				<li>
+					<a href="OffshoreCenter.html">
+					<img src="../image/mainPage/373272418667107934.png">
+					<span class="offShoreSpan">产学研合作机构</span>
+					</a>
+				</li>
+				<li>
+					<a href="peopleNeed.html">
+					<img src="../image/mainPage/444372233923929040.png">
+					<span>人才需求</span>
+					</a>
+				</li>
+				<li>
+					<img src="../image/mainPage/909481670449814702.png">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;更多</span>
+				</li>
+			</ul>
+		</div>
 
-    };
-</script>
+
+		<div class="content3">
+			<div class="content3Detail1">
+				<img class="content3Img01" src="./../image/Selectionofrecommended@3x.png">
+				<span class="content3Span01">精选推荐</span>
+			</div>
+				<ul class="content3Detail2">
+					<li>
+						<a href="PolicyNewsDetail.html"><span>国家中医药管理局办公室关 于申报国家中药标准化项目 的通知</span>
+						<img src="../image/ProjectApp01.png" />
+						<div class="ProjectApp-contentBottom">
+							<label>168评论</label>
+							<label>89转发</label>
+							<label>六分钟前</label>
+						</div>
+						</a>
+					</li>
+					<!--<li>
+						<img class="imgLeft" src="./../image/zhongyao.png">
+						<span>中药养生</span>
+						<img class="imgRight" src="./../image/Add@3x.png" />
+					</li>
+					<li>
+						<img class="imgLeft" src="./../image/zhongyao.png">
+						<span>中药养生</span>
+						<img class="imgRight" src="./../image/Add@3x.png" />
+					</li>
+					<li>
+						<img class="imgLeft" src="./../image/zhongyao.png">
+						<span>中药养生</span>
+						<img class="imgRight" src="./../image/Add@3x.png" />
+					</li>-->
+				</ul>
+		</div>
+
+		<div class="footer">
+			<ul>
+				<li>
+					<a href="../index.html">
+					<img src="./../image/Homepage@3x.png">
+					<span>首页</span>
+					</a>
+				</li>
+				<li>
+					<a href="mainPageService.html">
+					<img src="./../image/Service@3x.png">
+					<span>服务</span>
+					</a>
+				</li>
+				<li>
+					<a href="techNeed.html"><img src="./../image/Technicalrequirements@3x.png"></a>
+					<span>需求</span>
+				</li>
+				<li>
+					<a href="qADetail.html">
+					<img src="./../image/Questionandanswer@3x.png">
+					<span>问答</span>
+					</a>
+				</li>
+				<li id="PersonalCenter">
+					<!--<a href="login.html">-->
+					<img src="./../image/Mine@3x.png">
+					<span>我的</span>
+					<!--</a>-->
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../script/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="../script/imglazy.js"></script>
+		<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../script/haokehui.js"></script>
+		<script type="text/javascript" src="../script/api.js"></script>
+		<script>
+			$('.carousel').carousel({
+				interval:2000
+			})
+			
+			
+//			var data={ID:50};
+
+   			
+   			
+   		$.ajax({
+   				url:"https://api.qulv.com/AppAPI/general/ChooiseIsland.aspx?islands=[%20{%20%20%22TopLineNum%22%20:%20%228%22,%20%22EnName%22%20:%20%22Dubai%22%20}%20]",
+   				data:{
+   					id:50
+   				},
+   				dataType:"jsonp",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+   					console.log(data);
+   				}
+   			});
+		</script>
+	</body>
 </html>

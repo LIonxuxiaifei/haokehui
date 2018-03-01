@@ -1,0 +1,454 @@
+@charset "utf-8";
+html,body,div,ul,ol,li,p,h1,h2,h3,h4,h5,h6,
+form,fieldset,input,textarea,blockquote,table,th,td,
+dl,dt,dd,header,footer,nav,section,article,
+aside {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  position: relative;
+  font:.14rem/1.2 "Microsoft Yahei"
+}
+img {
+  vertical-align: top;
+  border: none;
+  max-width: 100%;
+}
+ul,ol,li {
+  list-style: none;
+}
+input {
+  border: 0;
+  background: none;
+}
+i,em {
+  font-style: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+/*链接样式*/
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  outline: none;
+  blr: expression("this.onFocus=this.blur()");
+}
+/**input type="number" 把那两个按钮去掉**/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="search"] input,
+textarea {
+  -webkit-appearance: none;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+small {
+  font-size: 85%;
+}
+div{
+	margin: 0;
+	padding: 0;
+}
+.PolicyNews-Bg{
+	display: block;
+	width: 7.5rem;
+	min-height: 13.34rem;
+	background-color: #FFFFFF;
+	overflow-x: hidden;
+}
+.PolicyNews-header{
+	display: block;
+	width: 7.5rem;
+	height: 1.28rem;
+	background-color: #5056CD;
+	text-align: center;
+	position: fixed;
+	top: 0;
+}
+.PolicyNews-header img{
+	position: absolute;
+	display: block;
+	width: 0.22rem;
+	height: 0.34rem;
+	left: 0.28rem;
+	top: 0.66rem;
+}
+.PolicyNews-header .PolicyNews-hspan02{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	left: 0.57rem;
+	top: 0.65rem;
+	position: absolute;
+}
+.PolicyNews-header .PolicyNews-hspan03{
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	vertical-align: -0.7rem;
+}
+.PolicyNews-nav{
+	display: block;
+	width: 7.2rem;
+	height: 2.05rem;
+	margin-left: 0.3rem;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #e8e8e8;
+	margin-top: 1.28rem;
+}
+.PolicyNews-nav .PolicyNews-navSpan01{
+	font-size: 0.46rem;
+	color: #5056cd;
+	float: left;
+	margin-top: 0.22rem;
+}
+.PolicyNews-nav .PolicyNews-navSpan02{
+	font-size: 0.34rem;
+	color: #2A2A2A;
+	float: left;
+	margin-top: 0.32rem;
+	overflow: hidden;
+}
+.PolicyNews-navDetail{
+	display: block;
+	width: 100%;
+	height: 0.32rem;
+	float: left;
+	margin-top: 0.15rem;
+}
+.PolicyNews-navDetail span{
+	display: block;
+	width: 0.55rem;
+	height: 0.29rem;
+	float: left;
+	background-color: #ff808d;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 0.29rem;
+	font-size: 0.22rem;
+	color: #FFFFFF;
+}
+.PolicyNews-navDetail .PN-navDetaillabel01{
+	font-size: 0.22rem;
+	color: #808080;
+	float: left;
+	margin-left: 0.5rem;
+}
+.PolicyNews-navDetail .PN-navDetaillabel02{
+	font-size: 0.22rem;
+	color: #808080;
+	float: left;
+	margin-left: 0.22rem;
+}
+.PolicyNews-navDetail .PN-navDetaillabel03{
+	font-size: 0.22rem;
+	color: #808080;
+	float: left;
+	margin-left: 0.2rem;
+}
+.PolicyNews-navDetail .PN-navDetaillabel04{
+	font-size: 0.22rem;
+	color: #808080;
+	float: left;
+	margin-left: 0.46rem;
+}
+.PolicyNews-Content{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+}
+.PolicyNews-Content ul{
+	display: block;
+	width: 6.87rem;
+	height: 100%;
+	margin-top: 0.25rem;
+	margin-left: 0.315rem;
+}
+.PolicyNews-Content ul li{
+	display: block;
+	width: 6.87rem;
+	height: 2.27rem;
+	background-color: #FFFFFF;
+	margin-bottom: 0.39rem;
+	border-bottom: 1px solid #E8E8E8;
+}
+.PolicyNews-Content li span{
+	font-size: 0.3rem;
+	color: #2A2A2A;
+	display: block;
+	width: 3.9rem;
+	height: 0.75rem;
+	float: left;
+	margin-left: 0.25rem;
+	margin-top: 0.17rem;
+}
+.PolicyNews-Content li img{
+	display: block;
+	width: 2.25rem;
+	height: 1.5rem;
+	float: right;
+	margin-top: 0.33rem;
+	margin-right: 0.16rem;
+}
+/*.PolicyNews-Content li p{
+	display: block;
+	width: 3.8rem;
+	height: 0.68rem;
+	float: left;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	line-height: 0.35rem;
+	margin-left: 0.28rem;
+	margin-top: 0.18rem;
+}*/
+.PolicyNews-Content .contentBottom{
+	display: block;
+	width: 7.5rem;
+	height: 0.35rem;
+	float: left;
+	line-height: 0.35rem;
+}
+.PolicyNews-Content .contentBottom{
+	font-size: 0.2rem;
+	color: #808080;
+	margin-left: 0.29rem;
+}
+
+/*政策新闻详情*/
+.PolicyNewsDetail-Bg{
+	display: block;
+	width: 7.5rem;
+	min-height: 13.34rem;
+	background-color: #FFFFFF;
+	overflow-x: hidden;
+}
+.PolicyNewsDetail-header{
+	display: block;
+	width: 7.5rem;
+	height: 1.28rem;
+	background-color: #5056CD;
+	text-align: center;
+	position: fixed;
+}
+.PolicyNewsDetail-header img{
+	position: absolute;
+	display: block;
+	width: 0.22rem;
+	height: 0.34rem;
+	left: 0.28rem;
+	top: 0.66rem;
+}
+.PolicyNewsDetail-header .PolicyNewsDetail-hspan02{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	left: 0.57rem;
+	top: 0.65rem;
+	position: absolute;
+}
+.PolicyNewsDetail-header .PolicyNewsDetail-hspan03{
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	vertical-align: -0.7rem;
+}
+.PolicyNewsDetail-nav{
+	display: block;
+	width: 7.5rem;
+	height: 2.65rem;
+	margin-top: 1.28rem;
+}
+.PolicyNewsDetail-nav p{
+	font-size: 0.34rem;
+	color: #2A2A2A;
+	margin: 0.28rem 0.25rem 0rem 0.25rem;
+}
+.PolicyNewsDetail-nav label{
+	font-size: 0.22rem;
+	color: #808080;
+	margin-left: 0.25rem;
+	margin-top: 0.22rem;
+	float: left;
+}
+.PolicyNewsDetail-nav span{
+	font-size: 0.22rem;
+	color: #808080;
+	margin-left: 0.26rem;
+	margin-top: 0.22rem;
+	float: left;
+}
+.PolicyNewsDetail-nav .PolicyNewsDetail-navDetail2{
+	display: block;
+	width: 7rem;
+	height: 0.3rem;
+	float: left;
+	margin-top: 0.45rem;
+}
+.PolicyNewsDetail-nav .PolicyNewsDetail-navDetail2 label{
+	margin-top: 0rem;
+	font-size: 0.24rem;
+	color: #333333;
+}
+.PolicyNewsDetail-content{
+	display: block;
+	width: 7.5rem;
+	height: 100%;
+}
+.PolicyNewsDetail-content p{
+	font-size: 0.26rem;
+	color: #2A2A2A;
+	margin: 0rem 0.25rem 0.23rem 0.25rem;
+	line-height: 0.5rem;
+}
+.PolicyNewsDetail-content img{
+	display: block;
+	width: 7.5rem;
+	height: 6.52rem;
+}
+
+
+
+/*@media*/
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 42.66px;
+  }
+}
+@media screen and (min-width: 360px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 384px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 51.2px;
+  }
+}
+@media screen and (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 53.34px;
+  }
+}
+@media screen and (min-width: 412px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 54.93px;
+  }
+}
+@media screen and (min-width: 414px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 55.2px;
+  }
+}
+@media screen and (min-width: 424px) {
+  body {
+    font-size: 14px;
+  }
+  html {
+    font-size: 56.54px;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 15.36px;
+  }
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 540px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width: 568px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 75.73px;
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 667px) {
+  body {
+    font-size: 17.28px;
+  }
+  html {
+    font-size: 88.93px;
+  }
+}
+@media screen and (min-width: 720px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 96px;
+  }
+}
+@media screen and (min-width: 736px) {
+  body {
+    font-size: 23.04px;
+  }
+  html {
+    font-size: 98.13px;
+  }
+}
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 24px;
+  }
+  html {
+    font-size: 100px;
+  }
+}

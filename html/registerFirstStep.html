@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册页面</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="format-detection" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<link rel="stylesheet" href="../css/mine.css" />
+		<link rel="stylesheet" href="../fonts/PingFang.css" />
+	
+	</head>
+	<body>
+		<div class="register-Bg">
+			
+		<div class="register-header">
+			<!--<span class="register-hspan01">取消</span>-->
+			<img src="../image/turnBack.png" />
+			<a href="javascript:history.back(-1)"><span class="register-hspan02">返回</span></a>
+			<span class="register-hspan03">注册新用户</span>
+		</div>
+		
+		<div class="register-nav">
+			<ul>
+				<li>
+					<img src="../image/login/Mobilephoneno@3x.png" />
+					<input id="mobileNum" placeholder="请输入手机号" />
+				</li>
+				<li>
+					<img src="../image/login/message.png" />
+					<input id="confirmCode"  placeholder="请输入验证码"/>
+					<!--<span>获取验证码</span>-->
+					<input class="register-GetCode" type="button" id="codeBtn" value="获取验证码"/>
+				</li>
+				<li>
+					<img src="../image/login/Password.png" />
+					<input id="registerPd"	placeholder="请输入密码" />
+				</li>
+				<li>
+					<img src="../image/login/Password.png" />
+					<input  id="confirmPd" placeholder="请确认密码" />
+				</li>
+			</ul>
+		</div>
+		
+		<div class="register-content">
+			<!--<a href="registerSecondStep.html">-->
+				<span id="reNextStep">下一步</span>
+			<!--</a>-->
+		</div>
+		
+		<div class="register-content1 ">
+			<span class="content1Detail1">已有账号?</span>
+			<label>立即绑定</label>
+			<span class="content1Detail2">可跳过此步</span>
+		</div>
+		
+		
+		<div class="register-jump register-hide">
+			<ul>
+				<li><span>提交成功，是否进入首页?</span></li>
+				<li>
+					<span class="register-jumpDetail1" id="register-back">退出</span>
+					<a href="main.html"><span class="register-jumpDetail2" id="register-forward">确定</span></a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="register-jumpBg register-hide"></div>
+			
+		</div>
+		
+		<script type="text/javascript" src="../script/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="../script/haokehui.js"></script>
+		<script>
+			
+
+
+
+			
+//			$("#codeBtn").click(function(){
+//				var username=document.getElementById("username").value
+//				var mobileNum=document.getElementById("mobileNum").value
+//				console.log(mobileNum)
+//				alert(mobileNum.value)
+//				$.ajax({
+// 				url:"http://47.100.46.113:8080/app/msg/sendMobileCode",
+// 				data:{
+// 					mobile:13637118308,
+// 					sendType:1
+// 				},
+// 				dataType:"json",
+// 				type:"post",
+// 				async:true,
+// 				success:function(data){
+// 					console.log(data)
+// 					console.log("徐潇飞")
+// 
+// 				}
+// 			});
+   			// 					var data1=JSON.stringify(data)
+   			// 					var data2=JSON.parse(data)
+   			
+   			
+// 				$.ajax({
+// 				url:"https://api.qulv.com/AppAPI/general/ChooiseIsland.aspx?islands=[%20{%20%20%22TopLineNum%22%20:%20%228%22,%20%22EnName%22%20:%20%22Dubai%22%20}%20]",
+// 				data:{
+// 					id:50
+// 				},
+// 				dataType:"jsonp",
+// 				type:"get",
+// 				async:true,
+// 				success:function(data){
+// 					console.log(data)
+// 
+// 				}
+// 			});
+   			
+   			
+//		})
+
+   			
+   			
+//			   	$.ajax({
+//			    url: "http://47.100.46.113:8080/app/msg/sendMobileCode",
+//			    type: "post",
+//			    data: {
+//			    	mobile:15675874269,
+// 					sendType:5
+//			    },
+//			    dataType: "json",
+//			    jsonp: "callback",
+//			    jsonpCallback:"jsonpCallback",
+//			    beforeSend:function(){
+//			        addLoading('努力查询中，请稍后');
+//			    },
+//			    success: function (data) {
+//			        removeLoading();
+//			        console.log(data);
+//			        
+//			    },
+//			    error: function () {
+//			        removeLoading();
+//			        alert("系统错误")
+//			    }
+//			});
+
+
+			
+	
+		</script>
+	</body>
+</html>

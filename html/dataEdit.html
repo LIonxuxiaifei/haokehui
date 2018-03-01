@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>资料编辑</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="format-detection" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		
+		
+		<link rel="stylesheet" href="../fonts/PingFang.css" />
+		<link rel="stylesheet" href="../city-picker/css/city-picker.css" />
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../datetimepicker/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" href="../css/mine.css" />
+	</head>
+	<body>
+		
+		<div class="register-Bg">	
+			
+		<div class="register-header">
+			<!--<span class="register-hspan01">取消</span>-->
+			<img src="../image/turnBack.png" />
+			<a href="javascript:history.back(-1)"><span class="register-hspan02">返回</span></a>
+			<span class="register-hspan03">资料编辑</span>
+			<label class="dataEdit-Save">保存</label>
+		</div>
+		
+		<div class="dataEdit-nav">
+			<ul>
+				<li>
+					<!--<span>更改头像</span>-->
+					<label>更改头像</label>
+					<img src="../image/login/avatar.png" />
+				</li>
+				<li>
+					<!--<span>昵称</span>-->
+					<label>昵称</label>
+					<!--<label>何雪铭</label>-->
+					<input value="何雪铭" />
+					<!--<input placeholder="何雪铭" />-->
+				</li>
+			</ul>
+		</div>
+		
+		<div class="dataEdit-nav">
+			<ul>
+				<li style="position: relative;">
+					<label>所在地</label>
+					<!--<label>所在地</label>-->
+					<input readonly type="text" data-toggle="city-picker" placeholder="" value="北京市/北京市/海淀区">
+				</li>
+				<li>
+					<label>性别</label>
+					<input type="text" placeholder="男或女" />
+				</li>
+				<li>
+					<label>生日</label>
+					<input type="text" value="2012-05-15 21:05" id="datetimepicker">
+				</li>
+				<li>
+					<label>婚姻</label>
+					<input type="text" placeholder="已婚或未婚" />
+				</li>
+			</ul>
+		</div>
+		
+		</div>
+		
+		<script type="text/javascript" src="../script/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="../city-picker/js/city-picker.data.min.js"></script>
+		<script type="text/javascript" src="../city-picker/js/city-picker.min.js"></script>
+		<script type="text/javascript" src="../datetimepicker/bootstrap-datetimepicker.min.js"></script>
+		<script type="text/javascript" src="../script/haokehui.js"></script>
+		<script>
+				$('#datetimepicker').datetimepicker();
+		</script>
+	</body>
+</html>

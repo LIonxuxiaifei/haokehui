@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册页面</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="format-detection" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<link rel="stylesheet" href="../css/mine.css" />
+		<link rel="stylesheet" href="../fonts/PingFang.css" />
+	
+	</head>
+	<body>
+		<div class="register-Bg">
+			
+		<div class="register-header">
+			<!--<span class="register-hspan01">取消</span>-->
+			<img src="../image/turnBack.png" />
+			<a href="javascript:history.back(-1)"><span class="register-hspan02">返回</span></a>
+			<span class="register-hspan03">注册新用户</span>
+		</div>
+		
+		<div class="register-nav">
+			<ul>
+				<li>
+					<img src="../image/login/Nickname.png" />
+					<input id="reNickname"  placeholder="请输入昵称" />
+				</li>
+				<li>
+					<img src="../image/login/Place.png" />
+					<input id="reAddress" placeholder="请输入所在地"/>
+				</li>
+				<li>
+					<img src="../image/login/Gender.png" />
+					<input id="reGender"  placeholder="请输入性别" />
+				</li>
+				<li>
+					<img src="../image/login/Birthday.png" />
+					<input id="reBirthday"  placeholder="请输入生日" />
+				</li>
+			</ul>
+		</div>
+		
+		<div class="register-content">
+			<span id="register-submit">提交</span>
+		</div>
+		
+		<div class="register-content1 ">
+			<span class="content1Detail1">已有账号?</span>
+			<label>立即绑定</label>
+			<span class="content1Detail2">可跳过此步</span>
+		</div>
+		
+		
+		<div class="register-jump register-hide">
+			<ul>
+				<li><span>提交成功，是否进入个人中心?</span></li>
+				<li>
+					<span class="register-jumpDetail1" id="register-back">退出</span>
+					<a href="personalCenter.html"><span class="register-jumpDetail2" id="register-forward">确定</span></a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="register-jumpBg register-hide"></div>
+			
+		</div>
+		
+		<script type="text/javascript" src="../script/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="../script/haokehui.js"></script>
+
+	</body>
+</html>

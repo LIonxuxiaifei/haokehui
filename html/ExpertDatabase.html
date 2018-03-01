@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>专家库</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="format-detection" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<link rel="stylesheet" href="../css/Expert.css" />
+		<link rel="stylesheet" type="text/css" href="./../css/haokehui.css" />
+		<!--<link href="fonts/a.ttf" />-->
+	
+		
+		<style>
+			.ExpertDatabase-nav{
+				display: block;
+				width: 7.5rem;
+				height: 0.72rem;
+				background-color: #FFFFFF;
+				border-bottom: 1px solid #E8E8E8;
+				position: fixed;
+				top: 1.26rem;
+			}
+			.ExpertDatabase-nav ul{
+				display: block;
+				width: 100%;
+			}
+			.ExpertDatabase-nav li{
+				display: block;
+				width: 33.3%;
+				float: left;
+				line-height: 0.72rem;
+				text-align: center;
+			}
+			.ExpertDatabase-nav li span{
+				display: block;
+				width: 90%;
+				margin-left: 5%;
+				font-size: 0.3rem;
+				color: #808080;
+			}
+			.ED-colorChange{
+				border-bottom: 2px solid #F4878F;
+				color: #F4878F !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ExpertDatabase-Bg">
+			<div class="ExpertDatabase-header">
+				<a href="javascript:history.back(-1)"><img src="../image/turnBack.png" /></a>
+				<a href="javascript:history.back(-1)">
+					<span class="ExpertDatabase-hspan02">返回</span>
+				</a>
+				<span class="ExpertDatabase-hspan03">专家库</span>
+			</div>
+		
+			<div class="ExpertDatabase-nav">
+				<ul>
+					<li>
+						<span class="ED-colorChange">科技专家</span>
+					</li>
+					<li>
+						<span>金融专家</span>
+					</li>
+					<li>
+						<span>企业专家</span>
+					</li>
+				</ul>
+			</div>
+		
+		<div class="ExpertDatabase-Content">
+			<ul id="test">
+				<!--<li v-for="item in list2">
+					<div class="ContentTop">
+						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<span class="ContentTopSpan01">{{item.Name}}</span>
+						<label>{{item.Title}}</label>
+						<p>{{item.description}}</p>
+						<div class="ContentTopBo">
+							<span class="ContentTopSpan02">评价：</span>
+							<label>专业</label>
+							<label>技术好</label>
+							<label>值得信赖</label>
+						</div>
+					</div>
+					<div class="contentBottom">
+						<span>免费</span>
+						<label>1789人咨询</label>
+						<img  />
+					</div>
+				</li>-->
+				
+				<!--<li v-for="item in list2">
+					<div class="ContentTop">
+						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<span class="ContentTopSpan01">{{item.Name}}</span>
+						<label>{{item.Title}}</label>
+						<p>{{item.description}}</p>
+						<div class="ContentTopBo">
+							<span class="ContentTopSpan02">评价：</span>
+							<label>专业</label>
+							<label>技术好</label>
+							<label>值得信赖</label>
+						</div>
+					</div>
+					<div class="contentBottom">
+						<span>免费</span>
+						<label>1789人咨询</label>
+						<img  />
+					</div>
+				</li>-->
+				
+				<li>
+					<div class="ContentTop">
+						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<span class="ContentTopSpan01">冯怡</span>
+						<label>上海中医药大学 专家，教授</label>
+						<p>简介：冯怡，女，博士，1961年7月出生，上海中医药大学教授，博士生导师。中药现代
+						制剂技术部工程研究中心常务副主任，上海教委中药药剂重要带头人</p>
+						<div class="ContentTopBo">
+							<span class="ContentTopSpan02">评价：</span>
+							<label>专业</label>
+							<label>技术好</label>
+							<label>值得信赖</label>
+						</div>
+					</div>
+					<div class="contentBottom">
+						<span>免费</span>
+						<label>1789人咨询</label>
+						<img  />
+					</div>
+				</li>
+				
+				<li>
+					<div class="ContentTop">
+						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<span class="ContentTopSpan01">冯怡</span>
+						<label>上海中医药大学 专家，教授</label>
+						<p>简介：冯怡，女，博士，1961年7月出生，上海中医药大学教授，博士生导师。中药现代
+						制剂技术部工程研究中心常务副主任，上海教委中药药剂重要带头人</p>
+						<div class="ContentTopBo">
+							<span class="ContentTopSpan02">评价：</span>
+							<label>专业</label>
+							<label>技术好</label>
+							<label>值得信赖</label>
+						</div>
+					</div>
+					<div class="contentBottom">
+						<span>免费</span>
+						<label>1789人咨询</label>
+						<img  />
+					</div>
+				</li>
+				
+				<li>
+					<div class="ContentTop">
+						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<span class="ContentTopSpan01">冯怡</span>
+						<label>上海中医药大学 专家，教授</label>
+						<p>简介：冯怡，女，博士，1961年7月出生，上海中医药大学教授，博士生导师。中药现代
+						制剂技术部工程研究中心常务副主任，上海教委中药药剂重要带头人</p>
+						<div class="ContentTopBo">
+							<span class="ContentTopSpan02">评价：</span>
+							<label>专业</label>
+							<label>技术好</label>
+							<label>值得信赖</label>
+						</div>
+					</div>
+					<div class="contentBottom">
+						<span>免费</span>
+						<label>1789人咨询</label>
+						<img  />
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="ExpertDatabase-Content1 hide">
+			<ul id="test">
+				<!--<li v-for="item in list2">
+					<div class="ContentTop">
+						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<span class="ContentTopSpan01">{{item.Name}}</span>
+						<label>{{item.Title}}</label>
+						<p>{{item.description}}</p>
+						<div class="ContentTopBo">
+							<span class="ContentTopSpan02">评价：</span>
+							<label>专业</label>
+							<label>技术好</label>
+							<label>值得信赖</label>
+						</div>
+					</div>
+					<div class="contentBottom">
+						<span>免费</span>
+						<label>1789人咨询</label>
+						<img  />
+					</div>
+				</li>-->
+				
+				<li>
+					<div class="ContentTop">
+						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<span class="ContentTopSpan01">ABCCC</span>
+						<label>上海中医药大学 专家，教授</label>
+						<p>简介：冯怡，女，博士，1961年7月出生，上海中医药大学教授，博士生导师。中药现代
+						制剂技术部工程研究中心常务副主任，上海教委中药药剂重要带头人</p>
+						<div class="ContentTopBo">
+							<span class="ContentTopSpan02">评价：</span>
+							<label>专业</label>
+							<label>技术好</label>
+							<label>值得信赖</label>
+						</div>
+					</div>
+					<div class="contentBottom">
+						<span>免费</span>
+						<label>1789人咨询</label>
+						<img  />
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		
+		<div class="ExpertDatabase-Content2 hide">
+			<ul id="test">
+				<!--<li v-for="item in list2">
+					<div class="ContentTop">
+						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<span class="ContentTopSpan01">{{item.Name}}</span>
+						<label>{{item.Title}}</label>
+						<p>{{item.description}}</p>
+						<div class="ContentTopBo">
+							<span class="ContentTopSpan02">评价：</span>
+							<label>专业</label>
+							<label>技术好</label>
+							<label>值得信赖</label>
+						</div>
+					</div>
+					<div class="contentBottom">
+						<span>免费</span>
+						<label>1789人咨询</label>
+						<img  />
+					</div>
+				</li>-->
+				
+				<li>
+					<div class="ContentTop">
+						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<span class="ContentTopSpan01">POEJ</span>
+						<label>上海中医药大学 专家，教授</label>
+						<p>简介：冯怡，女，博士，1961年7月出生，上海中医药大学教授，博士生导师。中药现代
+						制剂技术部工程研究中心常务副主任，上海教委中药药剂重要带头人</p>
+						<div class="ContentTopBo">
+							<span class="ContentTopSpan02">评价：</span>
+							<label>专业</label>
+							<label>技术好</label>
+							<label>值得信赖</label>
+						</div>
+					</div>
+					<div class="contentBottom">
+						<span>免费</span>
+						<label>1789人咨询</label>
+						<img  />
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		
+		
+		</div>
+		
+		       			<!--返回到顶部-->
+		<div id="returnTop" draggable="true" class="returnTop visiable hide">
+			<a href="#javascript:;"></a>
+		</div>
+		
+		
+		<!--json Test-->
+		<!--<div id="test">
+		<ul v-for="item in list2"> 
+				<li>
+					<div class="ContentTop">
+						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<span class="ContentTopSpan01">{{item.Name}}</span>
+						<label>{{item.Title}}</label>
+						<p>{{item.description}}</p>
+						<div class="ContentTopBo">
+							<span class="ContentTopSpan02">评价：</span>
+							<label>专业</label>
+							<label>技术好</label>
+							<label>值得信赖</label>
+						</div>
+					</div>
+					<div class="contentBottom">
+						<span>免费</span>
+						<label>1789人咨询</label>
+						<img  />
+					</div>
+				</li>
+		</ul>		
+		</div>-->
+		
+		<script type="text/javascript" src="../script/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="../script/vue.min.js"></script>
+		<script type="text/javascript" src="../script/vue-resource.min.js"></script>
+		<script type="text/javascript" src="../script/imglazy.js"></script>
+		<script type="text/javascript" src="../script/haokehui.js"></script>
+		<script>	
+		    Vue.use(VueResource);      //这个一定要加上，指的是调用vue-resource.js
+		    new Vue({
+		        el: '#test',      //div的id
+		        data: {
+		            list2: ""    //数据，名称自定
+		        },
+		        created: function () { //created方法，页面初始调用    
+		            var url = "../script/expertData.json";
+		            this.$http.get(url).then(function (data) {   //ajax请求封装
+		            	console.log(data)
+		                var json = data.bodyText;
+		                var usedData= JSON.parse(json);
+		                console.log(usedData)
+		                //我的json数据参考下面
+		                var libraryInfo=usedData.data.list
+		                this.list2=libraryInfo
+		                console.log(libraryInfo)
+		            }, function (response) {     //返回失败方法调用，暂不处理
+		                console.info(response);
+		            })
+		        }
+		    });
+		</script>
+	</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>政策新闻</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="format-detection" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<link rel="stylesheet" type="text/css" href="./../css/haokehui.css" />
+		<link rel="stylesheet" href="../css/PolicyNews.css" />
+		<style>
+			.PolicyNews-navSpan02{
+				overflow: hidden; 
+				white-space: nowrap; 
+				text-overflow: ellipsis;
+				width:7rem
+			}
+		</style>
+	</head>
+	<body>
+		<div class="PolicyNews-Bg">
+			<div class="PolicyNews-header">
+				<a href="#" onclick="javascript:window.history.back(-1);"><img src="../image/turnBack.png" /></a>
+				<a href="#" onclick="javascript:window.history.back(-1);">
+					<span class="PolicyNews-hspan02">返回</span>
+				</a>
+				<span class="PolicyNews-hspan03">政策新闻</span>
+			</div>
+		
+		
+		<div class="PolicyNews-nav" id="cube1">
+			<span class="PolicyNews-navSpan01">今日要闻</span>
+			<!--<span class="PolicyNews-navSpan02">总书记称赞中药香包, “我买一个”, 捧捧场</span>-->
+			<span class="PolicyNews-navSpan02" >{{list2.data.hotNews.title}}</span>
+			<div class="PolicyNews-navDetail">
+				<span>hot</span>
+				<label class="PN-navDetaillabel01">0评论</label>
+				<label class="PN-navDetaillabel02">0转发</label>
+				<label class="PN-navDetaillabel03">刚刚</label>
+				<!--<label class="PN-navDetaillabel04">来自新华社"新华视点"微博</label>-->
+				<label class="PN-navDetaillabel04">{{list2.data.hotNews.fromDescript}}</label>
+			</div>
+		</div>
+		
+		<div class="PolicyNews-Content">
+			<ul id="cube2">
+				<li v-for="item in list3">
+					<!--<a href="PolicyNewsDetail.html"><span>{{list2.data.page.list[0].title}}</span></a>-->
+					<!--<a href="PolicyNewsDetail.html">-->
+						<span>{{item.title}}</span>
+					<!--</a>-->
+					<!--<img src="http://med.sina.com/files/20171206/jpg/1512524560679.jpg" />-->
+					<img :src="item.originImages">
+					<!--<img lazy="y" src="http://pic.qtour.com/m/Content/img/img_loading_400_300.jpg" original="{{item.originImages}}" />-->
+					<!--lazy="y"  original="img/perfectionPlayPicture01.png" src="http://pic.qtour.com/m/Content/img/img_loading_400_300.jpg" style="width: 500px; height: 510px;-->
+					<!--<img src="{{item.images}}" />-->
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>东盟传统医药健康旅游国际论坛在巴西成功举行</span></a>
+					<img src="../image/PolicyNews01.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>东盟传统医药健康旅游国际论坛在巴西成功举行</span></a>
+					<img src="../image/PolicyNews01.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>东盟传统医药健康旅游国际论坛在巴西成功举行</span></a>
+					<img src="../image/PolicyNews01.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>东盟传统医药健康旅游国际论坛在巴西成功举行</span></a>
+					<img src="../image/PolicyNews01.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>东盟传统医药健康旅游国际论坛在巴西成功举行</span></a>
+					<img src="../image/PolicyNews01.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>-->
+				<!--<li>
+					<a href="PolicyNewsDetail.html"><span>东盟传统医药健康旅游国际论坛在巴西成功举行</span></a>
+					<img src="../image/PolicyNews01.png" />
+					<div class="contentBottom">
+						<label>168评论</label>
+						<label>89转发</label>
+						<label>六分钟前</label>
+					</div>
+				</li>-->
+			</ul>
+		</div>
+		</div>
+		
+		<!--返回到顶部-->
+		<div id="returnTop" draggable="true" class="returnTop visiable hide">
+			<a href="#javascript:;"></a>
+		</div>
+		
+		
+		<script type="text/javascript" src="../script/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="../script/vue.min.js"></script>
+		<script type="text/javascript" src="../script/vue-resource.min.js"></script>
+		<script type="text/javascript" src="../script/imglazy.js"></script>
+		<script type="text/javascript" src="../script/haokehui.js"></script>
+		<script>
+//			Vue.use(VueResource);   
+//		    new Vue({
+//		        el: '#cube1',    
+//		        data: {
+//		            list2: ""   
+//		        },
+//		        created: function () { 
+//		            var url = "http://47.100.46.113:8080/app/news/list";
+//		            
+//		            this.$http.get(url).then(function (data) {   
+//		            	console.log(data)
+//		                var json = data.bodyText;
+//		                var usedData= JSON.parse(json);
+//		                console.log(usedData)
+//		           
+//		                var libraryInfo=usedData.data.list
+//		                this.list2=libraryInfo
+//		                console.log(libraryInfo)
+//		            }, function (response) {    
+//		                console.info(response);
+//		            })
+//		        }
+//		    });
+
+
+
+
+
+//			Vue.use(VueResource); 
+//			new Vue({
+//				el: '#cube1',    
+//				   data: {
+//		            list2: ""   
+//		        },
+//				created: function () { 
+//			        this.$http({
+//                  method:'POST',
+//                  url:'http://47.100.46.113:8080/app/news/list',
+//                  data:{
+//                  	'page.current':1,
+//                  	'page.total':1,
+//                  	'channelId':2
+//                  	},
+//                  headers: {'Access-Control-Allow-Origin':'*'},
+//                  }).then(function(response){
+//                      console.log(response)
+//                     })
+//				}
+//			})
+
+
+			
+			   $.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':1,
+                    'channelId':2
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+   					console.log(data);
+   					new Vue({
+   						el:'#cube1',
+   						data:{
+		            		list2: data  
+		        		},
+   					})
+   					
+   					ImgLazy()
+   					$("#cube1").click(function(){
+// 						window.location.href='new_file.html'
+   						var url1="new_file.html?"
+   						var url2="id=1"
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+   				}
+   			});
+   			
+   			
+			   $.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':2
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(data)
+					var imgSource=pageList[0].originImages
+					console.log(imgSource)
+   					new Vue({
+   						el:'#cube2',
+   						data:{
+		            		list3: pageList,
+		            		image3:imgSource
+		        		},
+   					})
+   					
+   						
+   						ImgLazy()
+   						$("#cube2").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+		</script>
+	</body>
+</html>
