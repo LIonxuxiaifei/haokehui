@@ -27,7 +27,9 @@
 				<ul id="cubeA">
 					<li v-for="item in listA">
 						<span>{{item.title}}</span>
-						<img src="../image/ProjectApp01.png" />
+						<!--<img src="../image/ProjectApp01.png" />-->
+						<img v-bind:src="item.originImages" />
+						
 						<div class="ProjectApp-contentBottom">
 							<label>168评论</label>
 							<label>89转发</label>
@@ -73,7 +75,26 @@
    				success:function(data){
 					var pageList=data.data.page.list
 					console.log(data)
-			
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+						if(arr==0||arr==null){
+							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress01.png"
+							pageList[i].originImages=arr
+						}
+							else if(arr!=null){
+								var arr=arr.split(",");
+								for(z=0;z<arr.length;z++){
+								if(arr.length>1){
+								var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress01.png"
+								pageList[i].originImages=arr
+							}
+							}
+							}
+						
+					}
+//					新闻没有图片用默认的图片替换
    					new Vue({
    						el:'#cubeA',
    						data:{

@@ -152,27 +152,26 @@ $(function(){
 		}
 		
 //		服务页面切换
-		$(function(){
-			$(".service-nav").find("li").mousemove(function(){
-				$(this).find("span").addClass("service-colorChange")
-				$(this).siblings().children("span").removeClass("service-colorChange")
-				var index=$(this).index()
-//				console.log(index)
-				if(index==0){
-					$(".service-content").removeClass("hide")
-					$(".service-content1,.service-content2,.service-content3").addClass("hide")
-				}else if(index==1){
-					$(".service-content1").removeClass("hide")
-					$(".service-content,.service-content2,.service-content3").addClass("hide")
-				}else if(index==2){
-					$(".service-content2").removeClass("hide")
-					$(".service-content,.service-content1,.service-content3").addClass("hide")
-				}else if(index==3){
-					$(".service-content3").removeClass("hide")
-					$(".service-content,.service-content2,.service-content1").addClass("hide")
-				}
-			})
-		})
+//		$(function(){
+//			$(".service-nav").find("li").mousemove(function(){
+//				$(this).find("span").addClass("service-colorChange")
+//				$(this).siblings().children("span").removeClass("service-colorChange")
+//				var index=$(this).index()
+//				if(index==0){
+//					$(".service-content").removeClass("hide")
+//					$(".service-content1,.service-content2,.service-content3").addClass("hide")
+//				}else if(index==1){
+//					$(".service-content1").removeClass("hide")
+//					$(".service-content,.service-content2,.service-content3").addClass("hide")
+//				}else if(index==2){
+//					$(".service-content2").removeClass("hide")
+//					$(".service-content,.service-content1,.service-content3").addClass("hide")
+//				}else if(index==3){
+//					$(".service-content3").removeClass("hide")
+//					$(".service-content,.service-content2,.service-content1").addClass("hide")
+//				}
+//			})
+//		})
 		
 //		查找技术页面切换
 		$(function(){
@@ -267,24 +266,23 @@ $(function(){
 //		})
 		
 //		专家库页面点击切换
-		$(function(){
-			$(".ExpertDatabase-nav").find("li").mousemove(function(){
-				$(this).find("span").addClass("ED-colorChange")
-				$(this).siblings().children("span").removeClass("ED-colorChange")
-				var index=$(this).index()
-//				console.log(index)
-				if(index==0){
-					$(".ExpertDatabase-Content").removeClass("hide")
-					$(".ExpertDatabase-Content1,.ExpertDatabase-Content2").addClass("hide")
-				}else if(index==1){
-					$(".ExpertDatabase-Content1").removeClass("hide")
-					$(".ExpertDatabase-Content,.ExpertDatabase-Content2").addClass("hide")
-				}else if(index==2){
-					$(".ExpertDatabase-Content2").removeClass("hide")
-					$(".ExpertDatabase-Content1,.ExpertDatabase-Content").addClass("hide")
-				}
-			})
-		})
+//		$(function(){
+//			$(".ExpertDatabase-nav").find("li").mousemove(function(){
+//				$(this).find("span").addClass("ED-colorChange")
+//				$(this).siblings().children("span").removeClass("ED-colorChange")
+//				var index=$(this).index()
+//				if(index==0){
+//					$(".ExpertDatabase-Content").removeClass("hide")
+//					$(".ExpertDatabase-Content1,.ExpertDatabase-Content2").addClass("hide")
+//				}else if(index==1){
+//					$(".ExpertDatabase-Content1").removeClass("hide")
+//					$(".ExpertDatabase-Content,.ExpertDatabase-Content2").addClass("hide")
+//				}else if(index==2){
+//					$(".ExpertDatabase-Content2").removeClass("hide")
+//					$(".ExpertDatabase-Content1,.ExpertDatabase-Content").addClass("hide")
+//				}
+//			})
+//		})
 		
 	
 	function checkMobile(str) {

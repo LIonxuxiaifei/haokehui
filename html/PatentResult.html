@@ -31,7 +31,7 @@
 		<div class="PatentResult-content">
 			<ul id="cubeC">
 				<li v-for="item in listC">
-						<a href="PolicyNewsDetail.html"><span>{{item.title}}</span></a>
+						<span style="font-size: 0.32rem; overflow: hidden;text-overflow:ellipsis;width: 4rem;-webkit-line-clamp: 2;" >{{item.title}}</span>
 						<img src="./../image/NP1.png" />
 						<div class="contentBottom">
 						<label>168评论</label>
@@ -141,7 +141,7 @@
 		<script type="text/javascript" src="../script/vue.min.js"></script>
 		<script type="text/javascript" src="../script/vue-resource.min.js"></script>
 		<script type="text/javascript" src="../script/imglazy.js"></script>
-		<script type="text/javascript" src="../script/haokehui.js"></script>
+		<!--<script type="text/javascript" src="../script/haokehui.js"></script>-->
 		<script>
 			$.ajax({
    				url:"http://47.100.46.113:8080/app/news/list",

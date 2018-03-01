@@ -35,8 +35,12 @@
 			
 			
 			/*新闻*/
+			.content3{
+				margin-bottom: 1rem;
+			}
 			.content3 ul{
 				width: 7.5rem;
+			
 			}
 			.content3Detail2 li{
 				display: block;
@@ -46,7 +50,7 @@
 				border-bottom: 1px solid #E8E8E8;
 				float: left;
 				margin-left: 0.135rem;
-				margin-bottom: 1rem;
+				margin-bottom: 0.3rem;
 			}
 			.content3Detail2 li span{
 				font-size: 0.34rem;
@@ -142,11 +146,18 @@
   
 		</div>
 
-		<div class="content1">
+		<!--<a href="html/new_file5.html" style="cursor: pointer;">-->
+		<div id="cubeC" class="content1" style="cursor: pointer;">
 			<span>头条</span>
-			<p>亳州人民喜迎十九大开幕并认真学习  ...</p>
+			<!--<p style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width: 4.5rem;">
+	2018中国亳州离岸孵化成果对接会的通知
+  	...</p>-->
+  				<p style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width: 4.5rem;">
+			{{listC.data.topics[0].title}}
+  	...</p>
 			<img src="image/Turnthepage@3x.png" >
 		</div>
+		<!--</a>-->
 		<div class="content2">
 			<div class="content2Detail">
 				<img src="image/Popularservice.png">
@@ -216,16 +227,16 @@
 				<img class="content3Img01" src="image/Selectionofrecommended@3x.png">
 				<span class="content3Span01">精选推荐</span>
 			</div>
-				<ul class="content3Detail2">
-					<li>
-						<a href="html/PolicyNewsDetail.html"><span>国家中医药管理局办公室关 于申报国家中药标准化项目 的通知</span>
-						<img src="image/ProjectApp01.png" />
+				<ul id="cubeD" class="content3Detail2">
+					<li v-for="item in listD">
+						<span style="font-size: 0.32rem; overflow: hidden;text-overflow:ellipsis;width: 4rem;-webkit-line-clamp: 2;" >{{item.title}}</span>
+						<!--<img src="image/ProjectApp01.png" />-->
+						<img  v-bind:src="item.originImages"  />
 						<div class="ProjectApp-contentBottom">
 							<label>168评论</label>
 							<label>89转发</label>
-							<label>六分钟前</label>
+							<label>6分钟前</label>
 						</div>
-						</a>
 					</li>
 					<!--<li>
 						<img class="imgLeft" src="./../image/zhongyao.png">
@@ -278,6 +289,8 @@
 			</ul>
 		</div>
 		<script type="text/javascript" src="script/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="script/vue.min.js"></script>
+		<script type="text/javascript" src="script/vue-resource.min.js"></script>
 		<script type="text/javascript" src="script/imglazy.js"></script>
 		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="script/haokehui.js"></script>
@@ -302,22 +315,56 @@
 			})
 			
 			
-//			var data={ID:50};
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/Index",
+   				data:{
+   				},
+   				dataType:"json",
+   				type:"post",
+   				async:true,
+   				success:function(data){
+					console.log(data)
+					var data1=data.data.recommends;
+   					new Vue({
+   						el:'#cubeC',
+   						data:{
+		            		listC: data
+		        		},
+   					}),
+   					new Vue({
+   						el:'#cubeD',
+   						data:{
+		            		listD: data1
+		        		},
+   					})
+   					
+   						
+   						
+   						$("#cubeC").click(function(){
+   						var newsId=data.data.topics[0].id;
+   						console.log(newsId)
+   						var url1="html/new_file2.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+   						
+   					$("#cubeD").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=data.data.recommends[column].id;
+   						console.log(newsId)
+   						var url1="html/new_file2.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+   						
 
-   			
-   			
-// 		$.ajax({
-// 				url:"https://api.qulv.com/AppAPI/general/ChooiseIsland.aspx?islands=[%20{%20%20%22TopLineNum%22%20:%20%228%22,%20%22EnName%22%20:%20%22Dubai%22%20}%20]",
-// 				data:{
-// 					id:50
-// 				},
-// 				dataType:"jsonp",
-// 				type:"get",
-// 				async:true,
-// 				success:function(data){
-// 					console.log(data);
-// 				}
-// 			});
+   				}
+   			});
 		</script>
 	</body>
 </html>

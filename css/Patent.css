@@ -69,7 +69,8 @@ div{
 .PatentResult-Bg{
 	display: block;
 	width: 7.5rem;
-	min-height: 13.34rem;
+	/*min-height: 13.34rem;*/
+	min-height: 10rem;
 	background-color: #F1F1F1;
 }
 .PatentResult-header{

@@ -28,11 +28,11 @@
 			<a href="#" onclick="javascript:window.history.back(-1)"><span>返回</span></a>
 			<label>会议通知</label>
 		</div>
-		<div class="MnContent1">
+		<div class="MnContent1" style="min-height: 13.34rem;">
 			<ul id="cubeB">
 				<li v-for="item in listB">
 					<span>{{item.title}}</span>
-					<img src="./../image/NP1.png" />
+					<img v-bind:src="item.originImages" />
 					<div class="contentBottom">
 						<label>168评论</label>
 						<label>89转发</label>
@@ -139,6 +139,27 @@
    				success:function(data){
 					var pageList=data.data.page.list
 					console.log(data)
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+						if(arr==0||arr==null){
+							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress02.png"
+							pageList[i].originImages=arr
+						}
+							else if(arr!=null){
+								var arr=arr.split(",");
+								for(z=0;z<arr.length;z++){
+								if(arr.length>1){
+								var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress02.png"
+								pageList[i].originImages=arr
+							}
+							}
+							}
+						
+					}
+//					新闻没有图片用默认的图片替换
+					
    					new Vue({
    						el:'#cubeB',
    						data:{

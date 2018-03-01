@@ -39,287 +39,65 @@
 		</div>
 		
 		<div class="service-content">
-			<ul>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州市一医疗器械企业获省创 业大赛二等奖</span></a>
-					<img src="../image/service/serviceImg01.png" />
-					<p>日前，2017年“创响中国”安徽省創业赛暨颁奖仪式在安徽电视台一号... </p>
+			<ul id="cubeD">
+				<li v-for="item in listD">
+					<!--<a href="PolicyNewsDetail.html">-->
+					<!--<span>亳州市一医疗器械企业获省创 业大赛二等奖</span>-->
+					<span style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width: 4rem;">{{item.title}}</span>
+					<!--</a>-->
+					<!--<img src="../image/service/serviceImg01.png" />-->
+					<img v-bind:src="item.originImages" lazy="y" />
+					<p style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;" >{{item.summary}}</p>
 					<div class="service-contentBottom">
 						<label>2017年12月13号</label>
 						<label>16:08</label>
 					</div>
 					
 				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州：让发展有温度，让幸福 更有质感</span>
-					</a>
-					<img src="../image/service/serviceImg02.png" />
-					<p>党的十九大提出，在发展中保障人民坚持人人有责，人人享有，坚持底线... </p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州“一封家书”开始创业创新 的大门</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>去年以来，我市积极响应“大众创业，万众创新的”号召，以市委书记...</p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>我市再添两家国家级知识产权 企业</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>日前，国家知识产权示范企业和国家知识产权优势企业评比结果进行公...</p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州“一封家书”开始创业创新 的大门</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>去年以来，我市积极响应“大众创业，万众创新的”号召，以市委书记...</p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>我市再添两家国家级知识产权 企业</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>日前，国家知识产权示范企业和国家知识产权优势企业评比结果进行公...</p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>	
+
 			</ul>
 		</div>
 		
 		
 		<div class="service-content1 hide">
-			<ul>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州市一医疗器械企业获省创 业大赛二等奖</span>
-					</a>
-					<img src="../image/service/serviceImg02.png" />
-					<p>日前，2017年“创响中国”安徽省創业赛暨颁奖仪式在安徽电视台一号... </p>
+			<ul id="cubeE">
+				<li v-for="item in listE">
+					<span style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width: 4rem;">{{item.title}}</span>
+					<img v-bind:src="item.originImages" lazy="y" />
+					<p style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;" >{{item.summary}}</p>
 					<div class="service-contentBottom">
 						<label>2017年12月13号</label>
 						<label>16:08</label>
 					</div>
 				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州：让发展有温度，让幸福 更有质感</span>
-					</a>
-					<img src="../image/service/serviceImg02.png" />
-					<p>党的十九大提出，在发展中保障人民坚持人人有责，人人享有，坚持底线... </p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州市一医疗器械企业获省创 业大赛二等奖</span>
-					</a>
-					<img src="../image/service/serviceImg02.png" />
-					<p>日前，2017年“创响中国”安徽省創业赛暨颁奖仪式在安徽电视台一号... </p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州：让发展有温度，让幸福 更有质感</span>
-					</a>
-					<img src="../image/service/serviceImg02.png" />
-					<p>党的十九大提出，在发展中保障人民坚持人人有责，人人享有，坚持底线... </p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州“一封家书”开始创业创新 的大门</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>去年以来，我市积极响应“大众创业，万众创新的”号召，以市委书记...</p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>我市再添两家国家级知识产权 企业</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>日前，国家知识产权示范企业和国家知识产权优势企业评比结果进行公...</p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>					
 			</ul>
 		</div>
 		
 		<div class="service-content2 hide">
-			<ul>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州市一医疗器械企业获省创 业大赛二等奖</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>日前，2017年“创响中国”安徽省創业赛暨颁奖仪式在安徽电视台一号... </p>
+			<ul id="cubeF">
+				<li v-for="item in listF">
+					<span style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width: 4rem;">{{item.title}}</span>
+					<img v-bind:src="item.originImages" lazy="y" />
+					<p style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;" >{{item.summary}}</p>
 					<div class="service-contentBottom">
 						<label>2017年12月13号</label>
 						<label>16:08</label>
 					</div>
 				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州：让发展有温度，让幸福 更有质感</span>
-					</a>
-					<img src="../image/service/serviceImg02.png" />
-					<p>党的十九大提出，在发展中保障人民坚持人人有责，人人享有，坚持底线... </p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州市一医疗器械企业获省创 业大赛二等奖</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>日前，2017年“创响中国”安徽省創业赛暨颁奖仪式在安徽电视台一号... </p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州：让发展有温度，让幸福 更有质感</span>
-					</a>
-					<img src="../image/service/serviceImg02.png" />
-					<p>党的十九大提出，在发展中保障人民坚持人人有责，人人享有，坚持底线... </p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州“一封家书”开始创业创新 的大门</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>去年以来，我市积极响应“大众创业，万众创新的”号召，以市委书记...</p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>我市再添两家国家级知识产权 企业</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>日前，国家知识产权示范企业和国家知识产权优势企业评比结果进行公...</p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>					
 			</ul>
 		</div>
 		
 		<div class="service-content3 hide">
-			<ul>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州市一医疗器械企业获省创 业大赛二等奖</span>
-					</a>
-					<img src="../image/service/serviceImg01.png" />
-					<p>日前，2017年“创响中国”安徽省創业赛暨颁奖仪式在安徽电视台一号... </p>
+			<ul id="cubeG">
+				<li v-for="item in listG">
+					<span style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width: 4rem;">{{item.title}}</span>
+					<img v-bind:src="item.originImages" lazy="y" />
+					<p style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;" >{{item.summary}}</p>
 					<div class="service-contentBottom">
 						<label>2017年12月13号</label>
 						<label>16:08</label>
 					</div>
 				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州：让发展有温度，让幸福 更有质感</span>
-					</a>
-					<img src="../image/service/serviceImg02.png" />
-					<p>党的十九大提出，在发展中保障人民坚持人人有责，人人享有，坚持底线... </p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州市一医疗器械企业获省创 业大赛二等奖</span>
-					</a>
-					<img src="../image/service/serviceImg01.png" />
-					<p>日前，2017年“创响中国”安徽省創业赛暨颁奖仪式在安徽电视台一号... </p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州：让发展有温度，让幸福 更有质感</span>
-					</a>
-					<img src="../image/service/serviceImg02.png" />
-					<p>党的十九大提出，在发展中保障人民坚持人人有责，人人享有，坚持底线... </p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>亳州“一封家书”开始创业创新 的大门</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>去年以来，我市积极响应“大众创业，万众创新的”号召，以市委书记...</p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>
-				<li>
-					<a href="PolicyNewsDetail.html">
-					<span>我市再添两家国家级知识产权 企业</span>
-					</a>
-					<img src="../image/service/serviceImg03.png" />
-					<p>日前，国家知识产权示范企业和国家知识产权优势企业评比结果进行公...</p>
-					<div class="service-contentBottom">
-						<label>2017年12月13号</label>
-						<label>16:08</label>
-					</div>
-				</li>					
 			</ul>
 		</div>
 		</div>
@@ -358,6 +136,321 @@
 		</div>
 		
 		<script type="text/javascript" src="../script/jquery-3.2.0.min.js"></script>
-		<script type="text/javascript" src="../script/haokehui.js"></script>
+		<script type="text/javascript" src="../script/vue.min.js"></script>
+		<!--<script type="text/javascript" src="../script/vue-resource.min.js"></script>-->
+		<!--<script type="text/javascript" src="../script/haokehui.js"></script>-->
+		<script>
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':14
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(data)
+					console.log(pageList)
+//					新闻没有图片用默认的图片替换
+				
+//					for(i=0; i<pageList.length;i++){
+//						var arr=pageList[i].originImages
+//						if(arr==0||arr==null){
+//							var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+//							pageList[i].originImages=arr
+//						}
+//							else if(arr!=null){
+//								var arr=arr.split(",");
+//								for(z=0;z<arr.length;z++){
+//								if(arr.length>1){
+//								var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+//								pageList[i].originImages=arr
+//							}
+//							}
+//							}
+//						
+//					}
+//					新闻没有图片用默认的图片替换
+					
+   					new Vue({
+   						el:'#cubeD',
+   						data:{
+		            		listD: pageList
+		        		},
+   					})
+   					
+   						$("#cubeD").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file2.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+   			
+   			$(function(){
+			$(".service-nav").find("li").mousemove(function(){
+				$(this).find("span").addClass("service-colorChange")
+				$(this).siblings().children("span").removeClass("service-colorChange")
+				var index=$(this).index()
+				if(index==0){
+					$(".service-content").removeClass("hide")
+					$(".service-content1,.service-content2,.service-content3").addClass("hide")
+				$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':14
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(data)
+					console.log(pageList)
+//					新闻没有图片用默认的图片替换
+				
+//					for(i=0; i<pageList.length;i++){
+//						var arr=pageList[i].originImages
+//						if(arr==0||arr==null){
+//							var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+//							pageList[i].originImages=arr
+//						}
+//							else if(arr!=null){
+//								var arr=arr.split(",");
+//								for(z=0;z<arr.length;z++){
+//								if(arr.length>1){
+//								var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+//								pageList[i].originImages=arr
+//							}
+//							}
+//							}
+//						
+//					}
+//					新闻没有图片用默认的图片替换
+					
+   					new Vue({
+   						el:'#cubeD',
+   						data:{
+		            		listD: pageList
+		        		},
+   					})
+   					
+   						
+   						
+   						$("#cubeD").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file2.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+				}else if(index==1){
+					$(".service-content1").removeClass("hide")
+					$(".service-content,.service-content2,.service-content3").addClass("hide")
+				$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':15
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(data)
+					console.log(pageList)
+//					新闻没有图片用默认的图片替换
+				
+//					for(i=0; i<pageList.length;i++){
+//						var arr=pageList[i].originImages
+//						if(arr==0||arr==null){
+//							var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+//							pageList[i].originImages=arr
+//						}
+//							else if(arr!=null){
+//								var arr=arr.split(",");
+//								for(z=0;z<arr.length;z++){
+//								if(arr.length>1){
+//								var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+//								pageList[i].originImages=arr
+//							}
+//							}
+//							}
+//						
+//					}
+//					新闻没有图片用默认的图片替换
+					
+   					new Vue({
+   						el:'#cubeE',
+   						data:{
+		            		listE: pageList
+		        		},
+   					})
+   					
+   						
+   						
+   						$("#cubeE").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file2.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+				}else if(index==2){
+					$(".service-content2").removeClass("hide")
+					$(".service-content,.service-content1,.service-content3").addClass("hide")
+				$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':16
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(data)
+					console.log(pageList)
+//					新闻没有图片用默认的图片替换
+				
+//					for(i=0; i<pageList.length;i++){
+//						var arr=pageList[i].originImages
+//						if(arr==0||arr==null){
+//							var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+//							pageList[i].originImages=arr
+//						}
+//							else if(arr!=null){
+//								var arr=arr.split(",");
+//								for(z=0;z<arr.length;z++){
+//								if(arr.length>1){
+//								var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+//								pageList[i].originImages=arr
+//							}
+//							}
+//							}
+//						
+//					}
+//					新闻没有图片用默认的图片替换
+					
+   					new Vue({
+   						el:'#cubeF',
+   						data:{
+		            		listF: pageList
+		        		},
+   					})
+   					
+   						
+   						
+   						$("#cubeF").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file2.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+				}else if(index==3){
+					$(".service-content3").removeClass("hide")
+					$(".service-content,.service-content2,.service-content1").addClass("hide")
+					
+				$.ajax({
+   				url:"http://47.100.46.113:8080/app/news/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'channelId':17
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(data)
+					console.log(pageList)
+//					新闻没有图片用默认的图片替换
+				
+//					for(i=0; i<pageList.length;i++){
+//						var arr=pageList[i].originImages
+//						if(arr==0||arr==null){
+//							var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+//							pageList[i].originImages=arr
+//						}
+//							else if(arr!=null){
+//								var arr=arr.split(",");
+//								for(z=0;z<arr.length;z++){
+//								if(arr.length>1){
+//								var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+//								pageList[i].originImages=arr
+//							}
+//							}
+//							}
+//						
+//					}
+//					新闻没有图片用默认的图片替换
+					
+   					new Vue({
+   						el:'#cubeG',
+   						data:{
+		            		listG: pageList
+		        		},
+   					})
+   					
+   						
+   						
+   						$("#cubeG").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file2.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+				}
+			})
+		})
+   			
+		</script>
 	</body>
 </html>

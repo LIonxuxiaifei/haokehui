@@ -13,10 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="./../css/haokehui.css" />
 		<link rel="stylesheet"  type="text/css" href="./../css/font.css">
 		<!--<link href="fonts/a.ttf" />-->
-		<script type="text/javascript" src="../script/jquery-3.2.0.min.js"></script>
-		<script type="text/javascript" src="../script/imglazy.js"></script>
-		<script type="text/javascript" src="../script/haokehui.js"></script>
-		<script type="text/javascript" src="../script/api.js"></script>
+	
 	</head>
 	<body>
 		<div class="MnHeader">
@@ -25,24 +22,26 @@
 			<label>产学研合作机构</label>
 		</div>
 		<div class="OScontentDetail">
-			<ul>
-				<li>
+			<ul id="cubeB" style="min-height: 13.34rem;">
+				<li v-for="item in listB">
 					<div class="contentTop">
-						<a href="OffshoreCenterDetail.html">
-						<img class="OSxiaohui" src="./../image/offshore/Chineseacademyofsciences.png"/>
-						<span>亳州（中国科学院）离岸孵化中心</span>
+						<!--<a href="OffshoreCenterDetail.html">-->
+						<img class="OSxiaohui" v-bind:src="item.imgUrl"/>
+						<!--<span>亳州（中国科学院）离岸孵化中心</span>-->
+						<span style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width: 4rem;">{{item.unitTitle}}</span>
+						<!--<img class="OSmore" src="./../image/Turnthepage@3x.png" />-->
 						<img class="OSmore" src="./../image/Turnthepage@3x.png" />
-						</a>
+						<!--</a>-->
 					</div>
-					<div class="contentBottom">
+					<!--<div class="contentBottom">
 						<a href="OffshoreCenterDetail.html">
 						<img class="OSxiaohui" src="./../image/offshore/ShanghaiuniversityoftraditionalChinesemedicine.png"/>
 						<span>亳州（上海中医药大学）离岸孵化</span>
 						<img class="OSmore" src="./../image/Turnthepage@3x.png" />
 						</a>
-					</div>
+					</div>-->
 				</li>
-				<li>
+				<!--<li>
 					<div class="contentTop">
 						<a href="OffshoreCenterDetail.html">
 						<img class="OSxiaohui" src="./../image/offshore/Hefeiuniversityoftechnology.png"/>
@@ -57,8 +56,8 @@
 						<img class="OSmore" src="./../image/Turnthepage@3x.png" />
 						</a>
 					</div>
-				</li>
-				<li>
+				</li>-->
+				<!--<li>
 					<div class="contentTop">
 						<a href="OffshoreCenterDetail.html">
 						<img class="OSxiaohui" src="./../image/offshore/Anhuiuniversity.png"/>
@@ -73,8 +72,8 @@
 						<img class="OSmore" src="./../image/Turnthepage@3x.png" />
 						</a>
 					</div>
-				</li>	
-				<li>
+				</li>	-->
+				<!--<li>
 					<div class="contentTop">
 						<a href="OffshoreCenterDetail.html">
 						<img class="OSxiaohui" src="./../image/offshore/Southeastuniversity.png"/>
@@ -82,8 +81,73 @@
 						<img class="OSmore" src="./../image/Turnthepage@3x.png" />
 						</a>
 					</div>
-				</li>	
+				</li>	-->
 			</ul>
 		</div>
+		
+		<script type="text/javascript" src="../script/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="../script/vue.min.js"></script>
+		<script type="text/javascript" src="../script/vue-resource.min.js"></script>
+		<script type="text/javascript" src="../script/imglazy.js"></script>
+		<script type="text/javascript" src="../script/haokehui.js"></script>
+		<script type="text/javascript" src="../script/api.js"></script>
+		<script>
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/unit/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(data)
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+						if(arr==0||arr==null){
+							var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+							pageList[i].originImages=arr
+						}
+							else if(arr!=null){
+								var arr=arr.split(",");
+								for(z=0;z<arr.length;z++){
+								if(arr.length>1){
+								var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+								pageList[i].originImages=arr
+							}
+							}
+							}
+						
+					}
+//					新闻没有图片用默认的图片替换
+					
+   					new Vue({
+   						el:'#cubeB',
+   						data:{
+		            		listB: pageList
+		        		},
+   					})
+   					
+   						
+   						
+   						$("#cubeB").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file6.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+		</script>
 	</body>
 </html>

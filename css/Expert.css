@@ -156,7 +156,7 @@ div{
 	color: #a8a8a8;
 	display: block;
 	width: 5.4rem;
-	height: 1.6rem;
+	/*height: 1.6rem;*/
 	float: left;
 	margin-left: 0.23rem;
 	margin-top: 0.36rem;
@@ -164,9 +164,11 @@ div{
 .ExpertDatabase-Content ul li .ContentTop .ContentTopBo,.ExpertDatabase-Content1 ul li .ContentTop .ContentTopBo,.ExpertDatabase-Content2 ul li .ContentTop .ContentTopBo{
 	display: block;
 	width: 5.6rem;
-	height: 0.5rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
 	float: left;
 	margin-left: 1.4rem;
+	
 }
 .ContentTopBo .ContentTopSpan02{
 	font-size: 0.26rem;
@@ -178,7 +180,7 @@ div{
 	color: #f85915;
 	display: block;
 	padding: 0.05rem 0.12rem 0.05rem 0.12rem;
-	border: 1px solid #F85915;	
+	/*border: 1px solid #F85915;*/	
 	border-radius: 5px;
 	margin-left: 0.16rem;
 	float: left;

@@ -50,8 +50,8 @@
 					<li v-for="item in list4">
 						<!--<a href="PolicyNewsDetail.html"><span>坚定不移打造“世界中医药之都”</span></a>-->
 						<span>{{item.title}}</span>
-						<img src="../image/offshore/ScienceProgress01.png" />
-						<!--<img  v-bind:src="item.originImages" />-->
+						<!--<img src="../image/offshore/ScienceProgress01.png" />-->
+						<img  v-bind:src="item.originImages"/>
 						<div class="ScienceProgress-contentBottom">
 							<label class="ScienceProgress-label1">hot</label>
 							<label>0评论</label>
@@ -69,7 +69,7 @@
 					<li v-for="item in list5">
 						<!--<a href="PolicyNewsDetail.html"><span>中国药科大学李萍组在中药药 效物质基础研究领取取得重要 进展</span></a>-->
 						<span>{{item.title}}</span>
-						<img src="../image/offshore/ScienceProgress02.png" />
+						<img v-bind:src="item.originImages" />
 						<div class="ScienceProgress-contentBottom">
 							<label>0评论</label>
 							<label>0转发</label>
@@ -86,7 +86,7 @@
 					<li v-for="item in list6">
 						<!--<span>王国强：中医药发展列为国家 战略具备有力的条件和良好的 时机</span>-->
 						<span>{{item.title}}</span>
-						<img src="../image/offshore/ScienceProgress03.png" />
+						<img v-bind:src="item.originImages" />
 						<div class="ScienceProgress-contentBottom">
 							<label class="ScienceProgress-label1">hot</label>
 							<label>0评论</label>
@@ -104,7 +104,7 @@
 					<li v-for="item in list7">
 						<!--<span>中国药科大学李萍组在中药药 效物质基础研究领取取得重要 进展</span>-->
 						<span>{{item.title}}</span>
-						<img src="../image/offshore/ScienceProgress01.png" />
+						<img v-bind:src="item.originImages" />
 						<div class="ScienceProgress-contentBottom">
 							<label class="ScienceProgress-label1">hot</label>
 							<label>0评论</label>
@@ -123,7 +123,7 @@
 					<li v-for="item in list8">
 						<!--<span>中国药科大学李萍组在中药药 效物质基础研究领取取得重要 进展</span>-->
 						<span>{{item.title}}</span>
-						<img src="../image/offshore/ScienceProgress05.png" />
+						<img v-bind:src="item.originImages" />
 						<div class="ScienceProgress-contentBottom">
 							<label class="ScienceProgress-label1">hot</label>
 							<label>0评论</label>
@@ -143,7 +143,7 @@
 					<li v-for="item in list9">
 						<!--<span>中国药科大学李萍组在中药药 效物质基础研究领取取得重要 进展</span>-->
 						<span>{{item.title}}</span>
-						<img src="../image/offshore/ScienceProgress01.png" />
+						<img v-bind:src="item.originImages" />
 						<div class="ScienceProgress-contentBottom">
 							<label>0评论</label>
 							<label>0转发</label>
@@ -182,6 +182,45 @@
    				success:function(data){
 					var pageList=data.data.page.list
 					console.log(pageList)
+					
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+//						console.log(i)
+//						var arr=pageList[i].images
+						var arr=pageList[i].originImages
+//						多图片路径分割
+//						if(arr.length>1){
+//							pageList[i].originImages=arr[0]
+//						}
+						var arr=arr.split(",");
+						for(z=0;z<arr.length;z++){
+							if(arr==0){
+  							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress01.png"
+  							pageList[i].originImages=arr
+						}
+							else if(arr.length>1){
+							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress01.png"
+							pageList[i].originImages=arr
+						}
+//							 console.log(arr[z]);
+//							 arr=arr[0]
+//							 console.log(arr)
+//							 pageList[i].originImages=arr
+						}
+//						多图片路径分割
+  				
+
+  				
+//						else if(arr.length>1){
+//							var arr=arr
+//							pageList[i].originImages=arr
+//						}
+//						console.log(pageList)
+			
+					}
+//					新闻没有图片用默认的图片替换
+					
    					new Vue({
    						el:'#cube4',
    						data:{
@@ -232,6 +271,25 @@
    					console.log(data)
 					var pageList=data.data.page.list
 					console.log(pageList)
+					
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+
+						var arr=arr.split(",");
+						for(z=0;z<arr.length;z++){
+							if(arr==0){
+  							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress02.png"
+  							pageList[i].originImages=arr
+						}
+							else if(arr.length>1){
+							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress02.png"
+							pageList[i].originImages=arr
+						}
+						}
+					}
+//					新闻没有图片用默认的图片替换
    					new Vue({
    						el:'#cube4',
    						data:{
@@ -275,6 +333,25 @@
    					console.log(data)
 					var pageList=data.data.page.list
 					console.log(pageList)
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+
+						var arr=arr.split(",");
+						for(z=0;z<arr.length;z++){
+							if(arr==0){
+  							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress01.png"
+  							pageList[i].originImages=arr
+						}
+							else if(arr.length>1){
+							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress01.png"
+							pageList[i].originImages=arr
+						}
+						}
+					}
+//					新闻没有图片用默认的图片替换
+					
    					new Vue({
    						el:'#cube5',
    						data:{
@@ -318,6 +395,24 @@
    					console.log(data)
 					var pageList=data.data.page.list
 					console.log(pageList)
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+
+						var arr=arr.split(",");
+						for(z=0;z<arr.length;z++){
+							if(arr==0){
+  							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress03.png"
+  							pageList[i].originImages=arr
+						}
+							else if(arr.length>1){
+							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress03.png"
+							pageList[i].originImages=arr
+						}
+						}
+					}
+//					新闻没有图片用默认的图片替换					
    					new Vue({
    						el:'#cube6',
    						data:{
@@ -361,6 +456,25 @@
    					console.log(data)
 					var pageList=data.data.page.list
 					console.log(pageList)
+					
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+
+						var arr=arr.split(",");
+						for(z=0;z<arr.length;z++){
+							if(arr==0){
+  							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress01.png"
+  							pageList[i].originImages=arr
+						}
+							else if(arr.length>1){
+							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress01.png"
+							pageList[i].originImages=arr
+						}
+						}
+					}
+//					新闻没有图片用默认的图片替换					
    					new Vue({
    						el:'#cube7',
    						data:{
@@ -404,6 +518,29 @@
    					console.log(data)
 					var pageList=data.data.page.list
 					console.log(pageList)
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+						
+						
+						
+						if(arr==0||arr==null){
+  							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress05.png"
+  							pageList[i].originImages=arr
+						}
+							else if(arr!=null){
+								var arr=arr.split(",");
+								for(z=0;z<arr.length;z++){
+								if(arr.length>1){
+								var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress05.png"
+								pageList[i].originImages=arr
+							}
+							}
+							}
+						
+					}
+//					新闻没有图片用默认的图片替换
    					new Vue({
    						el:'#cube8',
    						data:{
@@ -447,7 +584,24 @@
    					console.log(data)
 					var pageList=data.data.page.list
 					console.log(pageList)
-			
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+
+						var arr=arr.split(",");
+						for(z=0;z<arr.length;z++){
+							if(arr==0){
+  							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress01.png"
+  							pageList[i].originImages=arr
+						}
+							else if(arr.length>1){
+							var arr="http://www.wodelion.com/shuhuiImg/ScienceProgress01.png"
+							pageList[i].originImages=arr
+						}
+						}
+					}
+//					新闻没有图片用默认的图片替换
    					new Vue({
    						el:'#cube9',
    						data:{

@@ -24,8 +24,24 @@
 			<a href="questionAnswer.html"><label class="qADetail-Save">我的问题</label></a>
 		</div>
 		<div class="qADetail-content">
-			<ul>
-				<li>
+			<ul id="cubeD">
+				<li v-for="item in listD">
+					<div class="qADetail-contentTop">
+						<img src="../image/answer/question.png" />
+						<span style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width: 4rem;">{{item.content}}</span>
+					</div>
+					<div class="qADetail-contentMedium">
+						<img src="../image/answer/answer.png" />
+						<span style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;" >{{item.answers[0].content}}</span>
+					</div>
+					<div class="qADetail-contentBottom">
+						<label>2017-12-03</label>
+						<label>23:24</label>
+						<span>关注 0</span>
+						<img src="../image/answer/Focuson@3x.png" />
+					</div>
+				</li>
+				<!--<li>
 					<div class="qADetail-contentTop">
 						<img src="../image/answer/question.png" />
 						<span>中国有哪些黑科技</span>
@@ -40,8 +56,8 @@
 						<span>关注 0</span>
 						<img src="../image/answer/Focuson@3x.png" />
 					</div>
-				</li>
-				<li>
+				</li>-->
+				<!--<li>
 					<div class="qADetail-contentTop">
 						<img src="../image/answer/question.png" />
 						<span>中国有哪些黑科技</span>
@@ -56,8 +72,8 @@
 						<span>关注 0</span>
 						<img src="../image/answer/Focuson@3x.png" />
 					</div>
-				</li>
-				<li>
+				</li>-->
+				<!--<li>
 					<div class="qADetail-contentTop">
 						<img src="../image/answer/question.png" />
 						<span>中国有哪些黑科技</span>
@@ -72,8 +88,8 @@
 						<span>关注 0</span>
 						<img src="../image/answer/Focuson@3x.png" />
 					</div>
-				</li>
-				<li>
+				</li>-->
+				<!--<li>
 					<div class="qADetail-contentTop">
 						<img src="../image/answer/question.png" />
 						<span>中国有哪些黑科技</span>
@@ -88,23 +104,7 @@
 						<span>关注 0</span>
 						<img src="../image/answer/Focuson@3x.png" />
 					</div>
-				</li>
-				<li>
-					<div class="qADetail-contentTop">
-						<img src="../image/answer/question.png" />
-						<span>中国有哪些黑科技</span>
-					</div>
-					<div class="qADetail-contentMedium">
-						<img src="../image/answer/answer.png" />
-						<span>哈佛大学收到鼻涕虫的启发，研制出新型止血材中文名字强力胶，名字也是简单粗暴</span>
-					</div>
-					<div class="qADetail-contentBottom">
-						<label>2017-12-03</label>
-						<label>23:24</label>
-						<span>关注 0</span>
-						<img src="../image/answer/Focuson@3x.png" />
-					</div>
-				</li>
+				</li>-->
 			</ul>
 		</div>
 		</div>
@@ -143,6 +143,40 @@
 		</div>
 		
 		<script type="text/javascript" src="../script/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="../script/vue.min.js"></script>
+		<script type="text/javascript" src="../script/vue-resource.min.js"></script>
 		<script type="text/javascript" src="../script/haokehui.js"></script>
+		<script>
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/website/qaList",
+   				data:{
+   					'page.current':1,
+                    'page.total':10,
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.pageUtil.list
+					console.log(data)
+					console.log(pageList)
+					var aa=pageList[0].answers[0].content
+//					console.log(aa)
+//					新闻没有图片用默认的图片替换
+				
+
+//					新闻没有图片用默认的图片替换
+					
+   					new Vue({
+   						el:'#cubeD',
+   						data:{
+		            		listD: pageList
+		        		},
+   					})
+   					
+
+   				}
+   			});
+		</script>
 	</body>
 </html>

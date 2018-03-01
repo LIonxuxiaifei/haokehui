@@ -54,7 +54,8 @@
 						<span>{{item.title}}</span>
 					<!--</a>-->
 					<!--<img src="http://med.sina.com/files/20171206/jpg/1512524560679.jpg" />-->
-					<img :src="item.originImages">
+					<img id="changeImg" v-bind:src="item.originImages" lazy="y" >
+					
 					<!--<img lazy="y" src="http://pic.qtour.com/m/Content/img/img_loading_400_300.jpg" original="{{item.originImages}}" />-->
 					<!--lazy="y"  original="img/perfectionPlayPicture01.png" src="http://pic.qtour.com/m/Content/img/img_loading_400_300.jpg" style="width: 500px; height: 510px;-->
 					<!--<img src="{{item.images}}" />-->
@@ -201,15 +202,28 @@
    					new Vue({
    						el:'#cube1',
    						data:{
-		            		list2: data  
+		            		list2: data,
+		  
 		        		},
    					})
    					
    					ImgLazy()
+// 					$("#cube1").click(function(){
+// 						var url1="new_file.html?"
+// 						var url2="id=1"
+// 						var url3=url1+url2
+// 						console.log(url3)
+// 						window.location.href=url3
+// 					})
+   					
    					$("#cube1").click(function(){
-// 						window.location.href='new_file.html'
-   						var url1="new_file.html?"
-   						var url2="id=1"
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=data.data.hotNews.id
+// 						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file.html?id="
+   						var url2=newsId
    						var url3=url1+url2
    						console.log(url3)
    						window.location.href=url3
@@ -231,17 +245,51 @@
    				success:function(data){
 					var pageList=data.data.page.list
 					console.log(data)
-					var imgSource=pageList[0].originImages
-					console.log(imgSource)
+//					var imgSource=pageList.originImages
+//					console.log(imgSource)
+					var imgSource=new Array();
+					for(i=0; i<pageList.length;i++){
+//						console.log(i)
+						var arr=pageList[i].originImages
+						if(arr==null){
+							var arr="http://www.wodelion.com/shuhuiImg/PolicyNews01.png"
+							pageList[i].originImages=arr
+						
+							
+						}
+//						else{
+//							imgSource.push(arr);
+//						}
+//						console.log(arr)
+						console.log(pageList)
+//						console.log(imgSource)
+					
+						 
+					}
+					
+					
    					new Vue({
    						el:'#cube2',
    						data:{
 		            		list3: pageList,
-		            		image3:imgSource
 		        		},
    					})
    					
-   						
+   						//			图片不存在用默认图片替换
+//			$(function(){
+//				$("#cube2").find("li").children("img").each(function() {
+//					
+//					var haha= $("#changeImg").attr("src")
+//					console.log(haha)
+//					if(haha==undefined){
+//						$("#changeImg").attr("src","http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg");
+//					}
+//					console.log("呵呵")
+//				})
+//				
+//			})
+			
+//			图片不存在用默认图片替换
    						ImgLazy()
    						$("#cube2").find("li").click(function(){
    						var column=$(this).index()

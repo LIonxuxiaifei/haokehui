@@ -74,7 +74,7 @@
 			</div>
 		
 		<div class="ExpertDatabase-Content">
-			<ul id="test">
+			<ul id="cubeD">
 				<!--<li v-for="item in list2">
 					<div class="ContentTop">
 						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
@@ -115,18 +115,17 @@
 					</div>
 				</li>-->
 				
-				<li>
+				<li v-for="item in listD">
 					<div class="ContentTop">
-						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
-						<span class="ContentTopSpan01">冯怡</span>
-						<label>上海中医药大学 专家，教授</label>
-						<p>简介：冯怡，女，博士，1961年7月出生，上海中医药大学教授，博士生导师。中药现代
-						制剂技术部工程研究中心常务副主任，上海教委中药药剂重要带头人</p>
+						<img class="ContentTopImg01" v-bind:src="item.imgUrl" style="border-radius: 50%;"/>
+						<span class="ContentTopSpan01">{{item.expertName}}</span>
+						<label style="display: -webkit-box;width: 3rem;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;">{{item.expertTitle}}</label>
+						<p style=" display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;">{{item.shortInformation}}</p>
 						<div class="ContentTopBo">
 							<span class="ContentTopSpan02">评价：</span>
-							<label>专业</label>
-							<label>技术好</label>
-							<label>值得信赖</label>
+							<label>{{item.expertTags}}</label>
+							<!--<label>{{item.expertTags[1]}}</label>-->
+							<!--<label>{{item.expertTags[2]}}</label>-->
 						</div>
 					</div>
 					<div class="contentBottom">
@@ -136,9 +135,9 @@
 					</div>
 				</li>
 				
-				<li>
+				<!--<li>
 					<div class="ContentTop">
-						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<img class="ContentTopImg01" src="../image/expert/ExpertData02.png" />
 						<span class="ContentTopSpan01">冯怡</span>
 						<label>上海中医药大学 专家，教授</label>
 						<p>简介：冯怡，女，博士，1961年7月出生，上海中医药大学教授，博士生导师。中药现代
@@ -155,11 +154,11 @@
 						<label>1789人咨询</label>
 						<img  />
 					</div>
-				</li>
+				</li>-->
 				
-				<li>
+				<!--<li>
 					<div class="ContentTop">
-						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
+						<img class="ContentTopImg01" src="../image/expert/expertData03.png" />
 						<span class="ContentTopSpan01">冯怡</span>
 						<label>上海中医药大学 专家，教授</label>
 						<p>简介：冯怡，女，博士，1961年7月出生，上海中医药大学教授，博士生导师。中药现代
@@ -176,12 +175,12 @@
 						<label>1789人咨询</label>
 						<img  />
 					</div>
-				</li>
+				</li>-->
 			</ul>
 		</div>
 		
 		<div class="ExpertDatabase-Content1 hide">
-			<ul id="test">
+			<ul id="cubeB">
 				<!--<li v-for="item in list2">
 					<div class="ContentTop">
 						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
@@ -202,18 +201,17 @@
 					</div>
 				</li>-->
 				
-				<li>
+				<li v-for="item in listB">
 					<div class="ContentTop">
-						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
-						<span class="ContentTopSpan01">ABCCC</span>
-						<label>上海中医药大学 专家，教授</label>
-						<p>简介：冯怡，女，博士，1961年7月出生，上海中医药大学教授，博士生导师。中药现代
-						制剂技术部工程研究中心常务副主任，上海教委中药药剂重要带头人</p>
+						<img class="ContentTopImg01" v-bind:src="item.imgUrl" style="border-radius: 50%;"/>
+						<span class="ContentTopSpan01">{{item.expertName}}</span>
+						<label style="display: -webkit-box;width: 3rem;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;">{{item.expertTitle}}</label>
+						<p style=" display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;">{{item.shortInformation}}</p>
 						<div class="ContentTopBo">
 							<span class="ContentTopSpan02">评价：</span>
-							<label>专业</label>
-							<label>技术好</label>
-							<label>值得信赖</label>
+							<label>{{item.expertTags}}</label>
+							<!--<label>{{item.expertTags[1]}}</label>-->
+							<!--<label>{{item.expertTags[2]}}</label>-->
 						</div>
 					</div>
 					<div class="contentBottom">
@@ -227,7 +225,7 @@
 		
 		
 		<div class="ExpertDatabase-Content2 hide">
-			<ul id="test">
+			<ul id="cubeC">
 				<!--<li v-for="item in list2">
 					<div class="ContentTop">
 						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
@@ -248,18 +246,17 @@
 					</div>
 				</li>-->
 				
-				<li>
+				<li v-for="item in listC">
 					<div class="ContentTop">
-						<img class="ContentTopImg01" src="../image/ExpertHead.png" />
-						<span class="ContentTopSpan01">POEJ</span>
-						<label>上海中医药大学 专家，教授</label>
-						<p>简介：冯怡，女，博士，1961年7月出生，上海中医药大学教授，博士生导师。中药现代
-						制剂技术部工程研究中心常务副主任，上海教委中药药剂重要带头人</p>
+						<img class="ContentTopImg01" v-bind:src="item.imgUrl" style="border-radius: 50%;" />
+						<span class="ContentTopSpan01">{{item.expertName}}</span>
+						<label style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width: 3rem;">{{item.expertTitle}}</label>
+						<p style=" display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;">{{item.shortInformation}}</p>
 						<div class="ContentTopBo">
 							<span class="ContentTopSpan02">评价：</span>
-							<label>专业</label>
-							<label>技术好</label>
-							<label>值得信赖</label>
+							<label style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width: 3rem;">{{item.expertTags}}</label>
+							<!--<label>技术好</label>-->
+							<!--<label>值得信赖</label>-->
 						</div>
 					</div>
 					<div class="contentBottom">
@@ -312,28 +309,198 @@
 		<script type="text/javascript" src="../script/imglazy.js"></script>
 		<script type="text/javascript" src="../script/haokehui.js"></script>
 		<script>	
-		    Vue.use(VueResource);      //这个一定要加上，指的是调用vue-resource.js
-		    new Vue({
-		        el: '#test',      //div的id
-		        data: {
-		            list2: ""    //数据，名称自定
-		        },
-		        created: function () { //created方法，页面初始调用    
-		            var url = "../script/expertData.json";
-		            this.$http.get(url).then(function (data) {   //ajax请求封装
-		            	console.log(data)
-		                var json = data.bodyText;
-		                var usedData= JSON.parse(json);
-		                console.log(usedData)
-		                //我的json数据参考下面
-		                var libraryInfo=usedData.data.list
-		                this.list2=libraryInfo
-		                console.log(libraryInfo)
-		            }, function (response) {     //返回失败方法调用，暂不处理
-		                console.info(response);
-		            })
-		        }
-		    });
+
+						$.ajax({
+   				url:"http://47.100.46.113:8080/app/expert/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'type':"tech"
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(data)
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+						if(arr==0||arr==null){
+							var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+							pageList[i].originImages=arr
+						}
+							else if(arr!=null){
+								var arr=arr.split(",");
+								for(z=0;z<arr.length;z++){
+								if(arr.length>1){
+								var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+								pageList[i].originImages=arr
+							}
+							}
+							}
+						
+					}
+//					新闻没有图片用默认的图片替换
+					
+   					new Vue({
+   						el:'#cubeD',
+   						data:{
+		            		listD: pageList
+		        		},
+   					})
+   					
+   						
+   						
+   						$("#cubeD").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file4.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+			
+		$(function(){
+			$(".ExpertDatabase-nav").find("li").mousemove(function(){
+				$(this).find("span").addClass("ED-colorChange")
+				$(this).siblings().children("span").removeClass("ED-colorChange")
+				var index=$(this).index()
+				if(index==0){
+					$(".ExpertDatabase-Content").removeClass("hide")
+					$(".ExpertDatabase-Content1,.ExpertDatabase-Content2").addClass("hide")
+
+				}else if(index==1){
+					$(".ExpertDatabase-Content1").removeClass("hide")
+					$(".ExpertDatabase-Content,.ExpertDatabase-Content2").addClass("hide")
+			$.ajax({
+   				url:"http://47.100.46.113:8080/app/expert/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'type':"finance"
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(data)
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+						if(arr==0||arr==null){
+							var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+							pageList[i].originImages=arr
+						}
+							else if(arr!=null){
+								var arr=arr.split(",");
+								for(z=0;z<arr.length;z++){
+								if(arr.length>1){
+								var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+								pageList[i].originImages=arr
+							}
+							}
+							}
+						
+					}
+//					新闻没有图片用默认的图片替换
+					
+   					new Vue({
+   						el:'#cubeB',
+   						data:{
+		            		listB: pageList
+		        		},
+   					})
+   					
+   						
+   						
+   						$("#cubeB").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file4.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+				}else if(index==2){
+					$(".ExpertDatabase-Content2").removeClass("hide")
+					$(".ExpertDatabase-Content1,.ExpertDatabase-Content").addClass("hide")
+					
+								$.ajax({
+   				url:"http://47.100.46.113:8080/app/expert/list",
+   				data:{
+   					'page.current':1,
+                    'page.total':8,
+                    'type':"company"
+   				},
+   				dataType:"json",
+   				type:"get",
+   				async:true,
+   				success:function(data){
+					var pageList=data.data.page.list
+					console.log(data)
+//					新闻没有图片用默认的图片替换
+				
+					for(i=0; i<pageList.length;i++){
+						var arr=pageList[i].originImages
+						if(arr==0||arr==null){
+							var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+							pageList[i].originImages=arr
+						}
+							else if(arr!=null){
+								var arr=arr.split(",");
+								for(z=0;z<arr.length;z++){
+								if(arr.length>1){
+								var arr="http://www.wodelion.com/Cortana/images/Java-Logo-Wallpaper.jpg"
+								pageList[i].originImages=arr
+							}
+							}
+							}
+						
+					}
+//					新闻没有图片用默认的图片替换
+					
+   					new Vue({
+   						el:'#cubeC',
+   						data:{
+		            		listC: pageList
+		        		},
+   					})
+   					
+   						
+   						
+   						$("#cubeC").find("li").click(function(){
+   						var column=$(this).index()
+   						console.log(column)
+   						var newsId=pageList[column].id;
+   						console.log(newsId)
+   						var url1="new_file4.html?id="
+   						var url2=newsId
+   						var url3=url1+url2
+   						console.log(url3)
+   						window.location.href=url3
+   					})
+
+   				}
+   			});
+				}
+			})
+		})
 		</script>
 	</body>
 </html>

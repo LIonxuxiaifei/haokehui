@@ -126,13 +126,16 @@ div{
 	width: 1.06rem;
 	height: 0.41rem;
 	border: 1px dashed #9a9898;
+	/*border: 1px dashed red;*/
 	text-align: center;
-	line-height: 0.41rem;
-	font-size: 0.3rem;
+	line-height: 0.38rem;
+	font-size: 0.28rem;
 	float: left;
 	margin-left: 0.29rem;
 	margin-top: 0.26rem;
 	color: #9a9898;
+	color: red;
+	/*font-weight: bold;*/
 }
 .content1 p{
 	font-size: 0.28rem;
